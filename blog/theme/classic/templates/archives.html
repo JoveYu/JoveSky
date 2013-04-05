@@ -1,0 +1,17 @@
+{% extends "page.html" %}
+
+{% block title %}Archives - {% endblock %}
+
+{% block main %}
+<div id="blog-archives">
+{% for post in posts %}
+  	<h2>{{ post.create_time|date:"Y" }}</h2>
+  
+  <article>
+    <h1><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h1>
+    <time datetime="{{ post.create_time|date:"Y-m-d H:i:s O" }}" pubdate><span class="month">{{ post.create_time|date:"n" }}</span> 月 <span class="day">{{ post.create_time|date:"j" }}</span></time>
+  </article>
+{% endfor %}
+</div>
+{% endblock %}
+

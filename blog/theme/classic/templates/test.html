@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="zh-CN">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>{% block title %}{% endblock %}{{ settings.SITE_TITLE }}</title>
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css" />
+		<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/all.js"></script>
+		<link rel="alternate" type="application/rss+xml" title="{{ settings.SITE_TITLE }} &raquo; Feed" href="/feed/" />
+		<link rel='stylesheet' id='shCore-css'  href='http://jovesky.com/wp-content/plugins/syntax-highlighter/3.0.83/css/shCore.css?ver=3.0.83' type='text/css' media='all' />
+		<link rel='stylesheet' id='shCoreJove-css'  href='/static/syntax-highlighter/3.0.83/css/shCoreJove.css?ver=3.0.83' type='text/css' media='all' />
+		<link rel='stylesheet' id='shThemeJove-css'  href='/static/syntax-highlighter/3.0.83/css/shThemeJove.css?ver=3.0.83' type='text/css' media='all' />
+	</head>
+
+	<body class="home blog">
+		<div id="wrapper" class="hfeed">
+			<div id="header">
+				<div id="masthead">
+					<div id="branding">
+						<h1 id="site-title"><span> <a href="/" title="{{ settings.SITE_TITLE }}" rel="home">{{ settings.SITE_TITLE }}</a> </span></h1>
+					</div><!-- #branding -->
+
+					<div id="access">
+						<div class="skip-link screen-reader-text">
+							<a href="#content" title="跳转到内容">跳转到内容</a>
+						</div>
+						<div class="menu">
+							<ul>
+								<li class="current_page_item">
+									<a href="http://jovesky.com/" title="首页"><span>首页</span></a>
+								</li>
+								<li class="page_item page-item-1208">
+									<a href="http://jovesky.com/about-jove/"><span>关于Jove</span></a>
+								</li>
+								<li class="page_item page-item-233">
+									<a href="http://jovesky.com/guestbook/"><span>好友留言</span></a>
+								</li>
+								<li class="page_item page-item-283">
+									<a href="http://jovesky.com/download/"><span>下载中心</span></a>
+								</li>
+								<li class="page_item page-item-1225">
+									<a href="http://jovesky.com/archives/"><span>文章归档</span></a>
+								</li>
+								<li class="page_item page-item-820">
+									<a href="http://jovesky.com/links/"><span>我的链接</span></a>
+								</li>
+							</ul>
+						</div>
+						<div id="rss">
+							<a href="http://jovesky.com/feed/" title="JoveSky Posts RSS feed" rel="alternate" type="application/rss+xml"><span>RSS</span></a>
+						</div>
+					</div><!-- #access -->
+				</div><!-- #masthead -->
+			</div><!-- #header -->
+
+			<div id="main">
+
+				<div id="container">
+					<div id="content" role="main">
+
+						<div id="post-1793" class="post-1793 post type-post status-publish format-standard hentry category-13">
+							<h2 class="entry-title"><a href="http://jovesky.com/2013/03/27/watercress-online-written-test-thoughts/" title="豆瓣线上笔试有感 的永久链接" rel="bookmark">豆瓣线上笔试有感</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2013/03/27/watercress-online-written-test-thoughts/" title="下午 7:18" rel="bookmark">2013 年 3 月 27 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e5%bf%83%e6%83%85%e8%ae%b0%e5%bd%95/" title="查看 心情记录 中的全部文章" rel="category tag">心情记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									到了大三 我也开始急着自己的实习了，喜欢python喜欢linux，总希望能找到相关的实习，但事实就是自己能力还不够哦。加上自己的项目经验不够多，感觉自己的简历都比别人薄一下。也许这也是很多大学生共同的烦恼。
+								</p>
+								<p>
+									最近正好收到豆瓣HR发来的邮件 约好时间参加线上笔试，说起豆瓣，我对他真是很有好感，一方面是因为他是国内成功运用python的网站之一，那些说python无法处理海量数据的只好闭嘴了，另一方面特别的喜欢豆瓣电台，基本上这两年听歌都用的她，说起他推介的歌还是不错的，偶尔可以发现一些不错的歌。
+								</p>
+								<p>
+									说到正题，拿到题目，AB卷，每个分别有两道算法题，一道操作题，我倒是很不理解，为什么还有操作题，发邮件也不好展示啊，上面还写着现场开发题，可能我没理解他的意思吧，这些不重要。简单谈谈题目。一道找零钱体，看似不难，但是我用以前的动态规划解答发现他给的币种太多了，递归严重超时了，于是gg思密达！一道加解密题借助着手边的电脑勉强做出来，一个数据库设计题，在我看来，我回答的简直是小学生水平，哈，然后是一个扑克判定输赢的题，看了题怎么看都是赌神里面玩的梭哈规则都一样，但是没什么思路加上时间木有了，表示木有做了！
+								</p>
+								<p>
+									怎么说了，第一次笔试，虽然是这种不正式的线上笔试，还能偷点懒，但是真的觉得很紧张，很多算法以前知道也突然想不起来，面对社会又是怎么的精彩或者惊彩。
+								</p>
+								<p>
+									不管怎么说这是一个好的开始，我要努力啊！
+								</p>
+								<p>
+									最近学习进度太慢了。
+								</p>
+								<p>
+									木有写文章，都是些牢骚！
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2013/03/27/watercress-online-written-test-thoughts/#respond" title="《豆瓣线上笔试有感》上的评论"><span class="ds-thread-count" data-thread-key="1793" data-replace="1">发表评论</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1786" class="post-1786 post type-post status-publish format-standard hentry category-15">
+							<h2 class="entry-title"><a href="http://jovesky.com/2013/01/01/new-year-weather/" title="新年新气象 的永久链接" rel="bookmark">新年新气象</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2013/01/01/new-year-weather/" title="上午 10:20" rel="bookmark">2013 年 1 月 1 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e7%82%b9%e6%bb%b4%e8%ae%b0%e5%bd%95/" title="查看 点滴记录 中的全部文章" rel="category tag">点滴记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									说来，自己最近几个月真是懒了很多，看看可怜的小站就知道，很久没有文章更新，但是总的来说2012末日已经安全过去了，我还活着，这点不应该庆幸吗，呵呵
+								</p>
+								<p>
+									来年来，自己要学的东西真的很多，以前从没想过自己会去学习c#，但现在因为一个项目的需求也开始了解了，其实变成语言真的不分好坏，只有是否合适自己用。
+								</p>
+								<p>
+									大三马上就要完了，马上就要实习了，说实话压力很大，我总觉得自己知道的太少了，事实上也是这样的，要加油，少玩一点了。
+								</p>
+								<p>
+									如果哪个公司有合适的实习机会提供的话，可以联系我，非常感谢。
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2013/01/01/new-year-weather/#comments" title="《新年新气象》上的评论"><span class="ds-thread-count" data-thread-key="1786" data-replace="1">5 comments</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1762" class="post-1762 post type-post status-publish format-standard hentry category-13">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/11/28/10-minutes-using-django-to-build-a-blog/" title="10分钟利用django搭建一个博客 的永久链接" rel="bookmark">10分钟利用django搭建一个博客</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/11/28/10-minutes-using-django-to-build-a-blog/" title="下午 8:20" rel="bookmark">2012 年 11 月 28 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e5%bf%83%e6%83%85%e8%ae%b0%e5%bd%95/" title="查看 心情记录 中的全部文章" rel="category tag">心情记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									以前老是听说ROR开发有多快多块，网上还有朋友为了证明这，专门制作了10分钟利用rails框架搭建一个简易博客的教程，最近学习django框架，觉得django给开发者的便捷也很多，心血来潮来写个10分钟用django搭建简易博客的教程。
+								</p>
+								<h2>写在文章前</h2>
+								<p>
+									我不是什么web高手，接触web不久，正努力往大神的方向追赶，高手看到这的时候可以去喝咖啡了！10分钟不能完成博客的全部功能，只能完成博客最基本的显示文章和标题的功能，如果大家有兴趣可以慢慢去完善，比如评论，RSS。界面上大家凑合看吧！哈哈。
+								</p>
+								<p>
+									我写这篇文章的时候使用的python2.7,django1.4,如果版本不一样的话相信也区别不大，个别参数或者路径不同罢了！下面的代码多用于linux，windows下区别不大稍微修改点就好！
+									<br />
+									<a href="http://jovesky.com/2012/11/28/10-minutes-using-django-to-build-a-blog/#more-1762" class="more-link">继续阅读 <span class="meta-nav">&rarr;</span></a>
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2012/11/28/10-minutes-using-django-to-build-a-blog/#comments" title="《10分钟利用django搭建一个博客》上的评论"><span class="ds-thread-count" data-thread-key="1762" data-replace="1">2 comments</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1756" class="post-1756 post type-post status-publish format-standard hentry category-13">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/11/11/summary/" title="小结 的永久链接" rel="bookmark">小结</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/11/11/summary/" title="下午 3:57" rel="bookmark">2012 年 11 月 11 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e5%bf%83%e6%83%85%e8%ae%b0%e5%bd%95/" title="查看 心情记录 中的全部文章" rel="category tag">心情记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									最近一段时间参与一个开源项目https://github.com/sunng87/exaile-doubanfm-plugin 一个使exaile播放器支持豆瓣FM几乎所有功能的项目，虽然只是简单的维护项目适配新版exaile的API，但通读源代码后了解了豆瓣FM的运作，了解了插件系统的原理，了解一些基本的通信知识，其实收获还是很多的！
+								</p>
+								<p>
+									虽然刚开始提出帮助维护这个项目的时候心里还是很虚的，但是进步都是一点点出来的，大学教的真的很有限，我喜欢优秀的技术，也希望学会更多，不为别的，因为我喜欢，喜欢完成一个作品后的成就感！
+								</p>
+								<p>
+									项目也帮我又复习了python这门语言，真的很好用，虽然效率不如c但是开发效率也是效率，呵呵，多亏了这门语言，我读起源代码才能这么轻松的了解程序运作流程！维护这个项目的时候，想到这个纯python的插件或许能帮助正在快速成长的linuxdeepin，也和他们开发人员聊了下。期待有机会能去linuxdeepin实习！
+								</p>
+								<p>
+									都大三了，身边的朋友慢慢开始发奋，大家虽然目标不一样，但是都很努力，我也不能落后，喜欢自由，喜欢技术，我就要做我自己！
+								</p>
+								<p>
+									PS：有兴趣的朋友可以试试这个插件，现在支持exaile 0.3.3版本了，在download里面可以下载到，使用的时候记得Ctrl+D哦！
+									<br />
+									arch的朋友，可以试试我刚维护的AUR包 https://aur.archlinux.org/packages/exaile-doubanfm-plugin/
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2012/11/11/summary/#respond" title="《小结》上的评论"><span class="ds-thread-count" data-thread-key="1756" data-replace="1">发表评论</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1750" class="post-1750 post type-post status-publish format-standard hentry category-15">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/11/05/git-delete-submitted-commit/" title="git 删除提交了的commit 的永久链接" rel="bookmark">git 删除提交了的commit</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/11/05/git-delete-submitted-commit/" title="上午 10:53" rel="bookmark">2012 年 11 月 5 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e7%82%b9%e6%bb%b4%e8%ae%b0%e5%bd%95/" title="查看 点滴记录 中的全部文章" rel="category tag">点滴记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									git是个不错的版本控制，昨天提交了个commit后来发现有问题，不想在提交一个commit修改了，于是想办法删除提交了commit
+								</p>
+								<p>
+									方法比较简单，利用git log查看commit_id,然后
+								</p>
+								<pre class="brush: bash; auto-links: false;">
+git reset --hard &lt;commit_id&gt;
+
+git push origin HEAD --force
+</pre>
+								<p>
+									其他:
+								</p>
+								<p>
+									根据–soft –mixed –hard，会对working tree和index和HEAD进行重置:
+									<br />
+									git reset –mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息
+									<br />
+									git reset –soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可
+									<br />
+									git reset –hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容
+								</p>
+								<p>
+									HEAD 最近一个提交
+									<br />
+									HEAD^ 上一次
+									<br />
+									<commit_id>
+										每次commit的SHA1值. 可以用git log 看到,也可以在页面上commit标签页里找到.
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2012/11/05/git-delete-submitted-commit/#respond" title="《git 删除提交了的commit》上的评论"><span class="ds-thread-count" data-thread-key="1750" data-replace="1">发表评论</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1745" class="post-1745 post type-post status-publish format-standard hentry category-15 tag-chrome tag-vim tag-176 tag-175">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/10/28/the-chrome-operating-tool-vimium/" title="chrome操作利器-Vimium 的永久链接" rel="bookmark">chrome操作利器-Vimium</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/10/28/the-chrome-operating-tool-vimium/" title="下午 2:05" rel="bookmark">2012 年 10 月 28 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e7%82%b9%e6%bb%b4%e8%ae%b0%e5%bd%95/" title="查看 点滴记录 中的全部文章" rel="category tag">点滴记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									键盘党貌似一切都希望用键盘解决，也就是这样的人创造了vi和emacs   今天介绍个用键盘操作chrome的插件-Vimium
+								</p>
+								<p>
+									还没有安装的可以到这里下，不过貌似最近google打上了GFW补丁，改hosts也不好用，好自为之吧！
+								</p>
+								<blockquote>
+									<p>
+										https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
+									</p>
+								</blockquote>
+								<p>
+									安装后打开网页只要光标不在输入框内，都可以用快捷键来操作，下面我整理了下快捷键的中文说明：
+									<br />
+									<a href="http://jovesky.com/2012/10/28/the-chrome-operating-tool-vimium/#more-1745" class="more-link">继续阅读 <span class="meta-nav">&rarr;</span></a>
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="tag-links"> <a href="http://jovesky.com/tag/chrome/" rel="tag">chrome</a>, <a href="http://jovesky.com/tag/vim/" rel="tag">vim</a>, <a href="http://jovesky.com/tag/%e6%95%88%e7%8e%87/" rel="tag">效率</a>, <a href="http://jovesky.com/tag/%e9%94%ae%e7%9b%98%e6%93%8d%e4%bd%9c/" rel="tag">键盘操作</a> </span>
+								<span class="comments-link"><a href="http://jovesky.com/2012/10/28/the-chrome-operating-tool-vimium/#comments" title="《chrome操作利器-Vimium》上的评论"><span class="ds-thread-count" data-thread-key="1745" data-replace="1">1 comment</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1736" class="post-1736 post type-post status-publish format-standard hentry category-15 tag-172 tag-171">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/10/14/add-windows-explorer-open-a-command-prompt/" title="windows资源管理器添加打开命令提示符 的永久链接" rel="bookmark">windows资源管理器添加打开命令提示符</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/10/14/add-windows-explorer-open-a-command-prompt/" title="下午 1:35" rel="bookmark">2012 年 10 月 14 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/%e7%82%b9%e6%bb%b4%e8%ae%b0%e5%bd%95/" title="查看 点滴记录 中的全部文章" rel="category tag">点滴记录</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									平常使用windows的时候，不怎么使用命令提示符，但是随着使用的工具的增多，尤其是开源工具，多是命令符。
+								</p>
+								<p>
+									然后你就傻傻的打开cmd然后不停的cd？那就错了，在资源管理器里添加一个简单的功能，右键添加一个简单的工具，“打开命令提示符”
+								</p>
+								<p>
+									方法很简单，新建一个.reg文件，也就是注册表文件，用记事本打开修改其中的内容如下
+								</p>
+								<pre class="brush: bash; auto-links: false;">
+Windows Registry Editor Version 5.00 
+[HKEY_CLASSES_ROOT\Directory\shell\cmd] 
+@="打开命令提示符" 
+[HKEY_CLASSES_ROOT\Directory\shell\cmd\command] 
+@="cmd.exe /k \"cd %L\""
+</pre>
+								<p>
+									然后双击运行这个导入，就可以点个文件夹，看看右键的功能吧，是不是方便很多呢！
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="tag-links"> <a href="http://jovesky.com/tag/%e5%91%bd%e4%bb%a4%e6%8f%90%e7%a4%ba%e7%ac%a6/" rel="tag">命令提示符</a>, <a href="http://jovesky.com/tag/%e8%b5%84%e6%ba%90%e7%ae%a1%e7%90%86%e5%99%a8/" rel="tag">资源管理器</a> </span>
+								<span class="comments-link"><a href="http://jovesky.com/2012/10/14/add-windows-explorer-open-a-command-prompt/#comments" title="《windows资源管理器添加打开命令提示符》上的评论"><span class="ds-thread-count" data-thread-key="1736" data-replace="1">1 comment</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1721" class="post-1721 post type-post status-publish format-standard hentry category-python tag-python-2 tag-170 tag-169 tag-168">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/10/10/intelligent-cutting-character-verification-code-identification/" title="验证码识别之智能切割字符 的永久链接" rel="bookmark">验证码识别之智能切割字符</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/10/10/intelligent-cutting-character-verification-code-identification/" title="下午 7:18" rel="bookmark">2012 年 10 月 10 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/python/" title="查看 Python 中的全部文章" rel="category tag">Python</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									前面一篇文章讲过了关于验证码的一些简单的识别技术（<a href="http://jovesky.com/2012/10/02/identify-entry-verification-code-2/" title="验证码识别入门" target="_blank">验证码识别入门</a>）
+								</p>
+								<p>
+									其中一个很大的局限性，就是我的字符分割是根据我事先在图片上量取的尺寸，换句话说，加入同样的代码换个图片来源就会出错，更不谈位置不规则的验证码。
+								</p>
+								<p>
+									后来找了一些资料，实现了智能切割字符，可以实现自动识别字符的位置，对位置不规则的尤其有效。下面一点点的来分析这个实现。
+									<br />
+									<a href="http://jovesky.com/2012/10/10/intelligent-cutting-character-verification-code-identification/#more-1721" class="more-link">继续阅读 <span class="meta-nav">&rarr;</span></a>
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="tag-links"> <a href="http://jovesky.com/tag/python-2/" rel="tag">python</a>, <a href="http://jovesky.com/tag/%e5%88%87%e5%89%b2%e5%ad%97%e7%ac%a6/" rel="tag">切割字符</a>, <a href="http://jovesky.com/tag/%e8%af%86%e5%88%ab/" rel="tag">识别</a>, <a href="http://jovesky.com/tag/%e9%aa%8c%e8%af%81%e7%a0%81/" rel="tag">验证码</a> </span>
+								<span class="comments-link"><a href="http://jovesky.com/2012/10/10/intelligent-cutting-character-verification-code-identification/#comments" title="《验证码识别之智能切割字符》上的评论"><span class="ds-thread-count" data-thread-key="1721" data-replace="1">2 comments</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1705" class="post-1705 post type-post status-publish format-standard hentry category-python">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/10/02/identify-entry-verification-code-2/" title="验证码识别入门 的永久链接" rel="bookmark">验证码识别入门</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/10/02/identify-entry-verification-code-2/" title="下午 12:55" rel="bookmark">2012 年 10 月 2 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/python/" title="查看 Python 中的全部文章" rel="category tag">Python</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									验证码识别是一个有意思的项目，很多时候多用于非法抓取，批量处理之类的，给网站运营者造成了一定的损失，这里我们研究验证码识别单纯研究图像识别技术。
+								</p>
+								<p>
+									文章主要利用python代码演示，就算你不懂，相信python简洁的自然语言话的语法也能让你理解，图像处理主要用PIL库
+								</p>
+								<p>
+									先来看看一个验证码，来自http://www.ruanko.com/validateImage.jsp
+									<br />
+									<a href="http://jovesky-wordpress.stor.sinaapp.com/uploads/2012/10/validateImage.jpg" rel="lightbox[1705]"><img src="http://jovesky-wordpress.stor.sinaapp.com/uploads/2012/10/validateImage.jpg" alt="" title="validateImage" width="60" height="20" class="alignnone size-full wp-image-1706" /></a>
+									<br />
+									<a href="http://jovesky.com/2012/10/02/identify-entry-verification-code-2/#more-1705" class="more-link">继续阅读 <span class="meta-nav">&rarr;</span></a>
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2012/10/02/identify-entry-verification-code-2/#comments" title="《验证码识别入门》上的评论"><span class="ds-thread-count" data-thread-key="1705" data-replace="1">5 comments</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="post-1690" class="post-1690 post type-post status-publish format-standard hentry category-python">
+							<h2 class="entry-title"><a href="http://jovesky.com/2012/09/16/python-binary-image-processing-denoising/" title="python图像处理之二值去噪 的永久链接" rel="bookmark">python图像处理之二值去噪</a></h2>
+
+							<div class="entry-meta">
+								<span class="entry-date"><a href="http://jovesky.com/2012/09/16/python-binary-image-processing-denoising/" title="下午 11:04" rel="bookmark">2012 年 9 月 16 日</a></span><span class="author vcard"><a class="url fn n" href="http://jovesky.com/author/jove/" title="查看 Jove 的所有文章">Jove</a></span><span class="cat-links"><a href="http://jovesky.com/category/python/" title="查看 Python 中的全部文章" rel="category tag">Python</a></span>
+							</div><!-- .entry-meta -->
+
+							<div class="entry-content">
+								<p>
+									好久没有写什么文章了，最近一直忙于学习各种知识，没有一个整体的知识体系也就没有贸然写文章，其实我想慢慢提高文章质量，话不多说，今天说说我验证码识别的第一步处理，也就是验证码的二值化和去噪点
+								</p>
+								<p>
+									我们先来看看一张简单的验证码，这张也是我一直在使用的一个例子（懒得找。。。）
+									<br />
+									<a href="http://jovesky-wordpress.stor.sinaapp.com/uploads/2012/09/2.jpg" rel="lightbox[1690]"><img src="http://jovesky-wordpress.stor.sinaapp.com/uploads/2012/09/2.jpg" alt="" title="2" width="60" height="20" class="alignnone size-full wp-image-1691" /></a>
+									<br />
+									<a href="http://jovesky.com/2012/09/16/python-binary-image-processing-denoising/#more-1690" class="more-link">继续阅读 <span class="meta-nav">&rarr;</span></a>
+								</p>
+							</div><!-- .entry-content -->
+
+							<div class="entry-utility">
+								<span class="comments-link"><a href="http://jovesky.com/2012/09/16/python-binary-image-processing-denoising/#comments" title="《python图像处理之二值去噪》上的评论"><span class="ds-thread-count" data-thread-key="1690" data-replace="1">6 comments</span></a></span>
+							</div><!-- .entry-utility -->
+						</div><!-- #post-## -->
+
+						<div id="pagenavi">
+							<span class="pages">Page: 1 of 32 </span><span class='page-numbers current'>1</span><a class='page-numbers' href='http://jovesky.com/page/2/' title='Page 2'>2</a><a class='page-numbers' href='http://jovesky.com/page/3/' title='Page 3'>3</a>... <a class='page-numbers' href='http://jovesky.com/page/32/' title='Last Page'>32</a><a class='page-numbers' href='http://jovesky.com/page/2/' title='Next Page'>»</a>
+						</div>
+						<!-- #nav-below -->
+					</div><!-- #content -->
+				</div><!-- #container -->
+
+				<div id="primary" class="widget-area" role="complementary">
+					<ul class="xoxo">
+
+						<li id="search-2" class="widget-container widget_search">
+							<form role="search" method="get" id="searchform" action="http://jovesky.com/" >
+								<div>
+									<label class="screen-reader-text" for="s">搜索：</label>
+									<input type="text" value="" name="s" id="s" />
+									<input type="submit" id="searchsubmit" value="搜索" />
+								</div>
+							</form>
+						</li>
+						<li id="text-3" class="widget-container widget_text">
+							<h3 class="widget-title">新浪微博</h3>
+							<div class="textwidget">
+								<iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=400&fansRow=2&ptype=0&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1884617072&verifier=1ca93bbd&colors=d6f3f7,ffffff,333333,0082cb,ecfbfd&dpc=1"></iframe>
+							</div>
+						</li>
+						<li id="ds-recent-comments-3" class="widget-container ds-widget-recent-comments">
+							<h3 class="widget-title">近期评论</h3><ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-avatar-size="32" data-excerpt-length="70"></ul>
+						</li>
+						<script>
+							if ( typeof DUOSHUO !== 'undefined')
+								DUOSHUO.RecentCommentsWidget && DUOSHUO.RecentCommentsWidget('.ds-recent-comments');
+						</script>
+						<li id="categories-2" class="widget-container widget_categories">
+							<h3 class="widget-title">分类目录</h3>
+							<ul>
+								<li class="cat-item cat-item-3">
+									<a href="http://jovesky.com/category/android/" title="查看 Android 下的所有文章">Android</a>
+								</li>
+								<li class="cat-item cat-item-4">
+									<a href="http://jovesky.com/category/cc/" title="查看 C/C++ 下的所有文章">C/C++</a>
+								</li>
+								<li class="cat-item cat-item-5">
+									<a href="http://jovesky.com/category/java/" title="查看 Java 下的所有文章">Java</a>
+								</li>
+								<li class="cat-item cat-item-6">
+									<a href="http://jovesky.com/category/linuxs/" title="查看 Linux 下的所有文章">Linux</a>
+								</li>
+								<li class="cat-item cat-item-7">
+									<a href="http://jovesky.com/category/poj-2/" title="查看 POJ 下的所有文章">POJ</a>
+								</li>
+								<li class="cat-item cat-item-8">
+									<a href="http://jovesky.com/category/python/" title="查看 Python 下的所有文章">Python</a>
+								</li>
+								<li class="cat-item cat-item-9">
+									<a href="http://jovesky.com/category/ubuntuarch/" title="查看 Ubuntu/Arch 下的所有文章">Ubuntu/Arch</a>
+								</li>
+								<li class="cat-item cat-item-10">
+									<a href="http://jovesky.com/category/vi-emacs/" title="查看 Vi/Emacs 下的所有文章">Vi/Emacs</a>
+								</li>
+								<li class="cat-item cat-item-11">
+									<a href="http://jovesky.com/category/wordpress/" title="查看 Wordpress 下的所有文章">Wordpress</a>
+								</li>
+								<li class="cat-item cat-item-12">
+									<a href="http://jovesky.com/category/%e5%8e%9f%e5%88%9b%e8%bd%af%e4%bb%b6/" title="查看 原创软件 下的所有文章">原创软件</a>
+								</li>
+								<li class="cat-item cat-item-13">
+									<a href="http://jovesky.com/category/%e5%bf%83%e6%83%85%e8%ae%b0%e5%bd%95/" title="查看 心情记录 下的所有文章">心情记录</a>
+								</li>
+								<li class="cat-item cat-item-14">
+									<a href="http://jovesky.com/category/%e6%96%87%e6%a1%a3%e6%91%98%e6%8a%84/" title="查看 文档摘抄 下的所有文章">文档摘抄</a>
+								</li>
+								<li class="cat-item cat-item-15">
+									<a href="http://jovesky.com/category/%e7%82%b9%e6%bb%b4%e8%ae%b0%e5%bd%95/" title="查看 点滴记录 下的所有文章">点滴记录</a>
+								</li>
+								<li class="cat-item cat-item-17">
+									<a href="http://jovesky.com/category/%e8%bd%af%e4%bb%b6%e6%94%b6%e8%97%8f/" title="查看 软件收藏 下的所有文章">软件收藏</a>
+								</li>
+							</ul>
+						</li>
+						<li id="recent-posts-2" class="widget-container widget_recent_entries">
+							<h3 class="widget-title">近期文章</h3>
+							<ul>
+								<li>
+									<a href="http://jovesky.com/2013/03/27/watercress-online-written-test-thoughts/" title="豆瓣线上笔试有感">豆瓣线上笔试有感</a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/2013/01/01/new-year-weather/" title="新年新气象">新年新气象</a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/2012/11/28/10-minutes-using-django-to-build-a-blog/" title="10分钟利用django搭建一个博客">10分钟利用django搭建一个博客</a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/2012/11/11/summary/" title="小结">小结</a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/2012/11/05/git-delete-submitted-commit/" title="git 删除提交了的commit">git 删除提交了的commit</a>
+								</li>
+							</ul>
+						</li>
+						<li id="archives-2" class="widget-container widget_archive">
+							<h3 class="widget-title">文章归档</h3>
+							<ul>
+								<li>
+									<a href='http://jovesky.com/2013/03/' title='2013 年三月'>2013 年三月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2013/01/' title='2013 年一月'>2013 年一月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/11/' title='2012 年十一月'>2012 年十一月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/10/' title='2012 年十月'>2012 年十月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/09/' title='2012 年九月'>2012 年九月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/08/' title='2012 年八月'>2012 年八月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/07/' title='2012 年七月'>2012 年七月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/05/' title='2012 年五月'>2012 年五月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/04/' title='2012 年四月'>2012 年四月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/03/' title='2012 年三月'>2012 年三月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/02/' title='2012 年二月'>2012 年二月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2012/01/' title='2012 年一月'>2012 年一月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/12/' title='2011 年十二月'>2011 年十二月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/11/' title='2011 年十一月'>2011 年十一月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/10/' title='2011 年十月'>2011 年十月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/09/' title='2011 年九月'>2011 年九月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/08/' title='2011 年八月'>2011 年八月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/07/' title='2011 年七月'>2011 年七月</a>
+								</li>
+								<li>
+									<a href='http://jovesky.com/2011/06/' title='2011 年六月'>2011 年六月</a>
+								</li>
+							</ul>
+						</li>
+						<li id="linkcat-165" class="widget-container widget_links">
+							<h3 class="widget-title">友情链接</h3>
+							<ul class='xoxo blogroll'>
+								<li>
+									<a href="http://www.ourunix.org/" title="跟walfred一起学嵌入式、linux开发技术">OurUnix</a>
+								</li>
+								<li>
+									<a href="http://sanjh.cn" title="学长的前端博客">三角湖-前端博客</a>
+								</li>
+								<li>
+									<a href="http://www.db89.org/" title="Open Free Share">杜斌</a>
+								</li>
+								<li>
+									<a href="http://www.bentutu.com/" title="分享Ubuntu和Linux新闻、软件、技巧，打造小众博客">笨兔兔</a>
+								</li>
+								<li>
+									<a href="http://www.lylinux.org/" title="大巧无功，重剑无锋。">逝去日子的博客</a>
+								</li>
+
+							</ul>
+						</li>
+						<li id="ds-recent-visitors-3" class="widget-container ds-widget-recent-visitors">
+							<h3 class="widget-title">最近访客</h3><ul class="ds-recent-visitors" data-num-items="15" data-show-time="0" data-avatar-size="50"></ul>
+						</li>
+						<script>
+							if ( typeof DUOSHUO !== 'undefined')
+								DUOSHUO.RecentVisitors('.ds-recent-visitors');
+						</script>
+						<li id="tag_cloud-3" class="widget-container widget_tag_cloud">
+							<h3 class="widget-title">标签</h3>
+							<div class="tagcloud">
+								<a href='http://jovesky.com/tag/android-2/' class='tag-link-19' title='9 个话题' style='font-size: 13.8709677419pt;'>android</a>
+								<a href='http://jovesky.com/tag/bwt/' class='tag-link-21' title='2 个话题' style='font-size: 8pt;'>bwt</a>
+								<a href='http://jovesky.com/tag/c/' class='tag-link-22' title='14 个话题' style='font-size: 15.9032258065pt;'>c++</a>
+								<a href='http://jovesky.com/tag/codeblocks/' class='tag-link-24' title='2 个话题' style='font-size: 8pt;'>codeblocks</a>
+								<a href='http://jovesky.com/tag/c%e8%af%ad%e8%a8%80/' class='tag-link-27' title='4 个话题' style='font-size: 10.4838709677pt;'>c语言</a>
+								<a href='http://jovesky.com/tag/dfs/' class='tag-link-31' title='8 个话题' style='font-size: 13.3064516129pt;'>dfs</a>
+								<a href='http://jovesky.com/tag/dp/' class='tag-link-33' title='6 个话题' style='font-size: 12.1774193548pt;'>DP</a>
+								<a href='http://jovesky.com/tag/kmp/' class='tag-link-46' title='2 个话题' style='font-size: 8pt;'>KMP</a>
+								<a href='http://jovesky.com/tag/lcs/' class='tag-link-47' title='2 个话题' style='font-size: 8pt;'>lcs</a>
+								<a href='http://jovesky.com/tag/linux/' class='tag-link-48' title='4 个话题' style='font-size: 10.4838709677pt;'>linux</a>
+								<a href='http://jovesky.com/tag/lis/' class='tag-link-49' title='2 个话题' style='font-size: 8pt;'>LIS</a>
+								<a href='http://jovesky.com/tag/map/' class='tag-link-51' title='2 个话题' style='font-size: 8pt;'>map</a>
+								<a href='http://jovesky.com/tag/poj/' class='tag-link-55' title='52 个话题' style='font-size: 22pt;'>poj</a>
+								<a href='http://jovesky.com/tag/prim/' class='tag-link-57' title='2 个话题' style='font-size: 8pt;'>prim</a>
+								<a href='http://jovesky.com/tag/stack/' class='tag-link-61' title='2 个话题' style='font-size: 8pt;'>stack</a>
+								<a href='http://jovesky.com/tag/stl/' class='tag-link-63' title='5 个话题' style='font-size: 11.3870967742pt;'>STL</a>
+								<a href='http://jovesky.com/tag/string/' class='tag-link-64' title='3 个话题' style='font-size: 9.35483870968pt;'>string</a>
+								<a href='http://jovesky.com/tag/ubuntu-2/' class='tag-link-68' title='3 个话题' style='font-size: 9.35483870968pt;'>ubuntu</a>
+								<a href='http://jovesky.com/tag/vector/' class='tag-link-71' title='2 个话题' style='font-size: 8pt;'>vector</a>
+								<a href='http://jovesky.com/tag/wa/' class='tag-link-74' title='2 个话题' style='font-size: 8pt;'>wa</a>
+								<a href='http://jovesky.com/tag/%e4%b8%bb%e9%a2%98/' class='tag-link-77' title='3 个话题' style='font-size: 9.35483870968pt;'>主题</a>
+								<a href='http://jovesky.com/tag/%e5%85%a8%e6%8e%92%e5%88%97/' class='tag-link-86' title='2 个话题' style='font-size: 8pt;'>全排列</a>
+								<a href='http://jovesky.com/tag/%e5%89%aa%e6%9e%9d/' class='tag-link-91' title='2 个话题' style='font-size: 8pt;'>剪枝</a>
+								<a href='http://jovesky.com/tag/%e5%8a%a0%e5%af%86/' class='tag-link-92' title='3 个话题' style='font-size: 9.35483870968pt;'>加密</a>
+								<a href='http://jovesky.com/tag/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92/' class='tag-link-93' title='2 个话题' style='font-size: 8pt;'>动态规划</a>
+								<a href='http://jovesky.com/tag/%e5%90%af%e5%8f%91/' class='tag-link-97' title='3 个话题' style='font-size: 9.35483870968pt;'>启发</a>
+								<a href='http://jovesky.com/tag/%e5%9b%9e%e6%ba%af/' class='tag-link-99' title='4 个话题' style='font-size: 10.4838709677pt;'>回溯</a>
+								<a href='http://jovesky.com/tag/%e5%ad%97%e5%85%b8/' class='tag-link-103' title='2 个话题' style='font-size: 8pt;'>字典</a>
+								<a href='http://jovesky.com/tag/%e5%ad%97%e7%ac%a6%e4%b8%b2/' class='tag-link-104' title='7 个话题' style='font-size: 12.7419354839pt;'>字符串</a>
+								<a href='http://jovesky.com/tag/%e5%ae%89%e8%a3%85/' class='tag-link-106' title='2 个话题' style='font-size: 8pt;'>安装</a>
+								<a href='http://jovesky.com/tag/%e5%b0%8f%e7%ab%99%e5%8f%98%e5%8c%96/' class='tag-link-107' title='2 个话题' style='font-size: 8pt;'>小站变化</a>
+								<a href='http://jovesky.com/tag/%e6%8c%87%e9%92%88/' class='tag-link-116' title='2 个话题' style='font-size: 8pt;'>指针</a>
+								<a href='http://jovesky.com/tag/%e6%8e%92%e5%ba%8f/' class='tag-link-117' title='10 个话题' style='font-size: 14.3225806452pt;'>排序</a>
+								<a href='http://jovesky.com/tag/%e6%9a%b4%e5%8a%9b/' class='tag-link-122' title='2 个话题' style='font-size: 8pt;'>暴力</a>
+								<a href='http://jovesky.com/tag/%e6%9e%9a%e4%b8%be/' class='tag-link-126' title='2 个话题' style='font-size: 8pt;'>枚举</a>
+								<a href='http://jovesky.com/tag/%e6%a8%a1%e6%8b%9f/' class='tag-link-127' title='16 个话题' style='font-size: 16.4677419355pt;'>模拟</a>
+								<a href='http://jovesky.com/tag/%e6%b0%b4%e9%a2%98/' class='tag-link-131' title='18 个话题' style='font-size: 17.0322580645pt;'>水题</a>
+								<a href='http://jovesky.com/tag/%e7%9f%a9%e9%98%b5/' class='tag-link-140' title='3 个话题' style='font-size: 9.35483870968pt;'>矩阵</a>
+								<a href='http://jovesky.com/tag/%e7%ae%97%e6%b3%95/' class='tag-link-141' title='7 个话题' style='font-size: 12.7419354839pt;'>算法</a>
+								<a href='http://jovesky.com/tag/%e7%ae%97%e6%b3%95%e4%bc%98%e5%8c%96/' class='tag-link-142' title='2 个话题' style='font-size: 8pt;'>算法优化</a>
+								<a href='http://jovesky.com/tag/%e7%b3%bb%e7%bb%9f/' class='tag-link-143' title='2 个话题' style='font-size: 8pt;'>系统</a>
+								<a href='http://jovesky.com/tag/%e7%ba%a6%e7%91%9f%e5%a4%ab/' class='tag-link-145' title='2 个话题' style='font-size: 8pt;'>约瑟夫</a>
+								<a href='http://jovesky.com/tag/%e8%b4%aa%e5%bf%83/' class='tag-link-152' title='7 个话题' style='font-size: 12.7419354839pt;'>贪心</a>
+								<a href='http://jovesky.com/tag/%e8%bf%9b%e9%98%b6/' class='tag-link-156' title='5 个话题' style='font-size: 11.3870967742pt;'>进阶</a>
+								<a href='http://jovesky.com/tag/%e9%80%92%e5%bd%92/' class='tag-link-158' title='4 个话题' style='font-size: 10.4838709677pt;'>递归</a>
+							</div>
+						</li>
+						<li id="meta-2" class="widget-container widget_meta">
+							<h3 class="widget-title">功能</h3>
+							<ul>
+								<li>
+									<a href="http://jovesky.com/wp-login.php">登录</a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/feed/" title="使用 RSS 2.0 订阅本站点内容">文章 <abbr title="Really Simple Syndication">RSS</abbr></a>
+								</li>
+								<li>
+									<a href="http://jovesky.com/comments/feed/" title="使用 RSS 订阅本站点的所有文章的近期评论">评论 <abbr title="Really Simple Syndication">RSS</abbr></a>
+								</li>
+								<li>
+									<a href="http://cn.wordpress.org/" title="基于 WordPress，一个优美、先进的个人信息发布平台。">WordPress.org</a>
+								</li>
+							</ul>
+						</li>
+						<li id="linkcat-2" class="widget-container widget_links">
+							<h3 class="widget-title">链接</h3>
+							<ul class='xoxo blogroll'>
+								<li>
+									<a href="http://www.vyouhuiquan.com/">vjia优惠券</a>
+								</li>
+								<li>
+									<a href="http://yigu.cnartka.com">亦谷女装</a>
+								</li>
+								<li>
+									<a href="http://www.qiaowuqiaoyu.net/">俏物悄语优惠券</a>
+								</li>
+								<li>
+									<a href="http://www.iifanke.com/">凡客诚品礼品卡</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</div><!-- #primary .widget-area -->
+			</div><!-- #main -->
+
+			<div id="footer" role="contentinfo">
+				<div id="colophon">
+
+					<div id="site-info">
+						<span class="wp_credit"><a href="http://wordpress.org/" title="人性化的个人发布平台" rel="generator">Powered By Wordpress</a></span> Copyright &copy; 2010 - 2012 <a href="http://jovesky.com/" title="JoveSky" rel="home">JoveSky</a>.
+
+						<script src="http://s19.cnzz.com/stat.php?id=3159761&web_id=3159761" language="JavaScript"></script>
+						|
+						<script type="text/javascript">
+							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+							document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1037825b47de6606ca0aae5e37e9faf0' type='text/javascript'%3E%3C/script%3E"));
+						</script>
+						|
+						<a href="http://jovesky-wordpress.stor.sinaapp.com/sitemap.xml">站点地图</a>
+						|
+						<a href="http://sae.sina.com.cn" target="_blank"><img src="http://static.sae.sina.com.cn/image/poweredby/117X12px.gif" title="Powered by Sina App Engine"></a>
+
+					</div><!-- #site-info -->
+
+					<div id="site-generator">
+						<a href="#header" rel="nofollow" title="Go to the header">Go Top</a>
+					</div><!-- #site-generator -->
+
+				</div><!-- #colophon -->
+			</div><!-- #footer -->
+
+		</div><!-- #wrapper -->
+
+		<script type="text/javascript" src="http://jovesky.com/wp-content/plugins/syntax-highlighter/3.0.83/js/shCore.js?ver=3.0.83"></script>
+		<script type="text/javascript" src="http://jovesky.com/wp-content/plugins/syntax-highlighter/3.0.83/js/shBrushBash.js?ver=3.0.83"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+			SyntaxHighlighter.all();
+			//]]>
+		</script>
+	</body>
+</html>

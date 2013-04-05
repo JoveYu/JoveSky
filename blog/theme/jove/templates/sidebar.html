@@ -1,0 +1,26 @@
+<li id="recent-posts-2" class="widget-container widget_recent_entries">
+	<h3 class="widget-title">近期文章</h3>
+	<ul>
+
+		{% for post in recposts %}
+		<li>
+			<a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+
+	</ul>
+</li>
+
+<li id="linkcat-165" class="widget-container widget_links">
+	<h3 class="widget-title">友情链接</h3>
+	<ul class="xoxo blogroll">
+
+		{% for link in links %}
+
+		<li>
+			<a href="{{ link.url }}" title="{{ link.name }}">{{ link.name }}</a>
+		</li>
+		{% endfor %}
+
+	</ul>
+</li>

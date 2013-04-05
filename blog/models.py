@@ -7,6 +7,17 @@ from django.db import models
 from django.db.models import F
 from django.contrib.auth.models import User
 
+class Image(models.Model):
+    UPLOAD_ROOT = '%Y/%m'
+    title = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
+    image=models.ImageField(upload_to=UPLOAD_ROOT, verbose_name=u'图片')
+    
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = verbose_name = u'图片'
+    
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
 

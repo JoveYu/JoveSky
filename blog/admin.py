@@ -4,7 +4,10 @@
 # Author:   Jove Yu <yushijun110@gmail.com>
 import markdown
 from django.contrib import admin
-from models import Tag,Page,Post,Link,Category
+from models import Tag,Page,Post,Link,Category,Image
+
+class ImageAdmin(admin.ModelAdmin):
+    list_display=['image']
 
 class TagAdmin(admin.ModelAdmin):
     list_display=['name','count_post']
@@ -40,3 +43,4 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
 admin.site.register(Page, PageAdmin)
 admin.site.register(Link, LinkAdmin)
+admin.site.register(Image, ImageAdmin)

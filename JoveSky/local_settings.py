@@ -7,7 +7,7 @@ ROOT_DIR = os.path.dirname(__file__)
 EMAIL = 'yushijun110@gmail.com'
 
 # 主题
-THEME = 'classic'
+THEME = 'jove'
 
 # 站点名称
 SITE_TITLE = 'JoveSky'
@@ -34,6 +34,9 @@ GA_ID = 'UA-15372596-1'
 DUOSHUO_SECRET = ''
 DUOSHUO_SHORT_NAME = 'jovesky'
 
+# 启用sae storage
+#DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
+
 
 #### 以下配置不要改动 ####
 TEMPLATE_DIRS = (
@@ -43,3 +46,4 @@ STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), '../blog/theme/'+THEME+'/static/'),
 )
 
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '../uploads')

@@ -5,6 +5,13 @@
 	</div>
 </li>
 
+<li id="recent-comment" class="widget-container widget_recent_entries">
+	<h3 class="widget-title">最新评论</h3>
+	<ul class="ds-recent-comments" data-num-items="5"></ul>
+
+</li>
+
+
 <li id="recent-posts" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">近期文章</h3>
 	<ul>
@@ -29,5 +36,32 @@
 		</li>
 		{% endfor %}
 
+	</ul>
+</li>
+
+<li id="recent-visiter" class="widget-container widget_recent_entries">
+	<h3 class="widget-title">最新访客</h3>
+	<ul class="ds-recent-visitors"></ul>
+	<!--多说js加载开始，一个页面只需要加载一次 -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jovesky"};
+	(function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = 'http://static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!--多说js加载结束，一个页面只需要加载一次 -->
+</li>
+
+<li id="linkcat" class="widget-container widget_links">
+	<h3 class="widget-title">链接</h3>
+	<ul class="xoxo blogroll">
+		<li><a href="http://www.vyouhuiquan.com/">vjia优惠券</a></li>
+		<li><a href="http://yigu.cnartka.com">亦谷女装</a></li>
+		<li><a href="http://www.qiaowuqiaoyu.net/">俏物悄语优惠券</a></li>
+		<li><a href="http://www.iifanke.com/">凡客诚品礼品卡</a></li>
 	</ul>
 </li>

@@ -12,20 +12,20 @@ except ImportError:
 
 class SaeStorage(Storage):
      
-    def __init__(self, location="base"
-            #accesskey=settings.ACCESS_KEY, 
-            #secretkey=settings.SECRET_KEY, 
-            #prefix=settings.APP_NAME
-            #media_root=settings.MEDIA_ROOT,
-            #media_url=settings.MEDIA_URL,
+    def __init__(self, location="uploads",
+            accesskey=settings.ACCESS_KEY, 
+            secretkey=settings.SECRET_KEY, 
+            prefix=settings.APP_NAME,
+            media_root=settings.MEDIA_ROOT,
+            media_url=settings.MEDIA_URL,
             ): 
-        #self.accesskey = accesskey
-        #self.secretkey = secretkey
-        #self.prefix = prefix
-        #self.media_root = media_root
-        #self.media_url = media_url
+        self.accesskey = accesskey
+        self.secretkey = secretkey
+        self.prefix = prefix
+        self.media_root = media_root
+        self.media_url = media_url
 
-        #self.client = sae.storage.Client(accesskey, secretkey, prefix)
+        self.client = sae.storage.Client(accesskey, secretkey, prefix)
         self.prefix = location
         self.client = sae.storage.Client()
 

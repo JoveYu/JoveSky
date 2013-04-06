@@ -1,7 +1,36 @@
 # coding: utf-8
 # author: Jove Yu <yushijun110[AT]gmail.com>
 import os
+
 ROOT_DIR = os.path.dirname(__file__)
+
+if 'SERVER_SOFTWARE' in os.environ:
+    import sae.const
+    # SAE
+    DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': sae.const.MYSQL_DB, 
+        'USER': sae.const.MYSQL_USER,
+        'PASSWORD': sae.const.MYSQL_PASS,
+        'HOST': sae.const.MYSQL_HOST,            
+        'PORT': sae.const.MYSQL_PORT,                
+    }
+    }
+else:
+    # Local
+    DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'jovesky', 
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',            
+        'PORT': '3306',                
+    }
+    }
 
 # 邮箱（报错时发送）
 EMAIL = 'yushijun110@gmail.com'
@@ -34,8 +63,12 @@ GA_ID = 'UA-15372596-1'
 DUOSHUO_SECRET = ''
 DUOSHUO_SHORT_NAME = 'jovesky'
 
-# 启用sae storage
-#DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
+
+#SAE
+ACCESS_KEY=''
+SECRET_KEY=''
+APP_NAME=''
+
 
 
 #### 以下配置不要改动 ####

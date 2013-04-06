@@ -7,6 +7,7 @@ ROOT_DIR = os.path.dirname(__file__)
 if 'SERVER_SOFTWARE' in os.environ:
     import sae.const
     # SAE
+    DEBUG = False
     DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
     DATABASES = {
     'default': {
@@ -65,9 +66,9 @@ DUOSHUO_SHORT_NAME = 'jovesky'
 
 
 #SAE
-ACCESS_KEY=''
-SECRET_KEY=''
-APP_NAME=''
+ACCESS_KEY='llxjw1wol3'
+SECRET_KEY='zz4xi3mxjzyy5x4lljyii01hmkmi114l42y4llhi'
+APP_NAME='jovesky4django'
 
 
 

@@ -101,7 +101,7 @@ def archives(request):
     '''归档页面'''
     posts = [Post(**i) for i in Post.objects.values('id', 'title', 'create_time', 'slug')]
     page = {
-        'title': 'Blog Archive',
+        'title': '文章归档',
     }
 
     c= {

@@ -2,7 +2,7 @@
 # −*− coding: UTF−8 −*−
 #
 # Author:   Jove Yu <yushijun110@gmail.com>
-import markdown2
+import markdown
 from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image
 
@@ -24,7 +24,7 @@ class PageAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         '''新建，修改页面'''
         obj.author=request.user
-        obj.content=markdown2.markdown(obj.markdown)[:-1]#fix for markdown2
+        obj.content=markdown.markdown(obj.markdown,['codehilite'])
         
         return super(PageAdmin,self).save_model(request, obj, form, change)
     
@@ -34,7 +34,7 @@ class PostAdmin(admin.ModelAdmin):
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user
-        obj.content = markdown2.markdown(obj.markdown)[:-1]#fix for markdown2
+        obj.content = markdown.markdown(obj.markdown,['codehilite'])
         '''新建，修改文章'''
         return super(PostAdmin, self).save_model( request, obj, form, change)
     

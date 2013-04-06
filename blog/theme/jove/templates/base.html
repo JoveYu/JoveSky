@@ -7,20 +7,14 @@
       {% block title %}{% endblock %}{{ settings.SITE_TITLE }}
     </title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css"
-    />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/pygments/murphy.css"/>
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.3.2/jquery.min.js">
     </script>
     <script type="text/javascript" src="/static/js/all.js">
     </script>
     <link rel="alternate" type="application/rss+xml" title="{{ settings.SITE_TITLE }} &raquo; Feed"
     href="/feed/" />
-    <link rel='stylesheet' id='shCore-css' href='/static/syntax-highlighter/3.0.83/css/shCore.css?ver=3.0.83'
-    type='text/css' media='all' />
-    <link rel='stylesheet' id='shCoreJove-css' href='/static/syntax-highlighter/3.0.83/css/shCoreJove.css?ver=3.0.83'
-    type='text/css' media='all' />
-    <link rel='stylesheet' id='shThemeJove-css' href='/static/syntax-highlighter/3.0.83/css/shThemeJove.css?ver=3.0.83'
-    type='text/css' media='all' />
   </head>
   
   <body class="home blog">
@@ -131,49 +125,6 @@
       <!-- #footer -->
     </div>
     <!-- #wrapper -->
-    <script type="text/javascript" src="/static/syntax-highlighter/3.0.83/js/shCore.js?ver=3.0.83"></script>
-    <script type="text/javascript" src="/static/syntax-highlighter/3.0.83/js/shAutoloader.js?ver=3.0.83"></script>
-    <script type="text/javascript">
-		function path()
-		{
-		  var args = arguments,
-		      result = []
-		      ;
-		       
-		  for(var i = 0; i < args.length; i++)
-		      result.push(args[i].replace('@', '/static/syntax-highlighter/3.0.83/js/'));
-		       
-		  return result
-		};
-		 
-		SyntaxHighlighter.autoloader.apply(null, path(
-		  'applescript            @shBrushAppleScript.js',
-		  'actionscript3 as3      @shBrushAS3.js',
-		  'bash shell             @shBrushBash.js',
-		  'coldfusion cf          @shBrushColdFusion.js',
-		  'cpp c                  @shBrushCpp.js',
-		  'c# c-sharp csharp      @shBrushCSharp.js',
-		  'css                    @shBrushCss.js',
-		  'delphi pascal          @shBrushDelphi.js',
-		  'diff patch pas         @shBrushDiff.js',
-		  'erl erlang             @shBrushErlang.js',
-		  'groovy                 @shBrushGroovy.js',
-		  'java                   @shBrushJava.js',
-		  'jfx javafx             @shBrushJavaFX.js',
-		  'js jscript javascript  @shBrushJScript.js',
-		  'perl pl                @shBrushPerl.js',
-		  'php                    @shBrushPhp.js',
-		  'text plain             @shBrushPlain.js',
-		  'py python              @shBrushPython.js',
-		  'ruby rails ror rb      @shBrushRuby.js',
-		  'sass scss              @shBrushSass.js',
-		  'scala                  @shBrushScala.js',
-		  'sql                    @shBrushSql.js',
-		  'vb vbnet               @shBrushVb.js',
-		  'xml xhtml xslt html    @shBrushXml.js'
-		));
-		SyntaxHighlighter.all();
-</script>
 
   </body>
 

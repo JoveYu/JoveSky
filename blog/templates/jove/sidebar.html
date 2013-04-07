@@ -7,7 +7,7 @@
 
 <li id="recent-comment" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">最新评论</h3>
-	<ul class="ds-recent-comments" data-num-items="5"></ul>
+	<ul class="ds-recent-comments"><li></li></ul>
 
 </li>
 
@@ -28,9 +28,7 @@
 <li id="linkcat" class="widget-container widget_links">
 	<h3 class="widget-title">友情链接</h3>
 	<ul class="xoxo blogroll">
-
 		{% for link in links %}
-
 		<li>
 			<a href="{{ link.url }}" title="{{ link.name }}">{{ link.name }}</a>
 		</li>
@@ -41,7 +39,7 @@
 
 <li id="recent-visiter" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">最新访客</h3>
-	<ul class="ds-recent-visitors"></ul>
+	<ul class="ds-recent-visitors"><li></li></ul>
 	<!--多说js加载开始，一个页面只需要加载一次 -->
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"jovesky"};
@@ -56,7 +54,7 @@
 	<!--多说js加载结束，一个页面只需要加载一次 -->
 </li>
 
-<li id="linkcat" class="widget-container widget_links">
+<li id="linkcat-ad" class="widget-container widget_links">
 	<h3 class="widget-title">链接</h3>
 	<ul class="xoxo blogroll">
 		<li><a href="http://www.vyouhuiquan.com/">vjia优惠券</a></li>

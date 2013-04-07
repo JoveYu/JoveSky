@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html dir="ltr" lang="zh-CN">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN">
   
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -76,21 +76,21 @@
       <!-- #header -->
       <div id="main">
         <div id="container">
-          <div id="content" role="main">
+          <div id="content" >
             {% block content %}{% endblock %}
           </div>
           <!-- #content -->
         </div>
         <!-- #container -->
-        <div id="primary" class="widget-area" role="complementary">
+        <div id="primary" class="widget-area" >
           <ul class="xoxo">
             <li id="search-2" class="widget-container widget_search">
-              <form role="search" method="get" id="searchform" action="http://www.google.com/search">
+              <form method="get" id="searchform" action="http://www.google.com/search">
                 <div>
                   <label class="screen-reader-text" for="s">
                     搜索：
                   </label>
-                  <input type="hidden" name="q" value="site:{{ settings.SITE_URL }}">
+                  <input type="hidden" name="q" value="site:{{ settings.SITE_URL }}"/>
                   <input type="text" value="" name="q" id="s" />
                   <input type="submit" id="searchsubmit" value="搜索" />
                 </div>
@@ -102,7 +102,7 @@
         <!-- #primary .widget-area -->
       </div>
       <!-- #main -->
-      <div id="footer" role="contentinfo">
+      <div id="footer" >
         <div id="colophon">
           <div id="site-info">
             Copyright &copy; 2010 - {% now “Y” %}

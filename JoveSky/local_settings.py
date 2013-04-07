@@ -2,11 +2,10 @@
 # author: Jove Yu <yushijun110[AT]gmail.com>
 import os
 
-ROOT_DIR = os.path.dirname(__file__)
 
 if 'SERVER_SOFTWARE' in os.environ:
-    import sae.const
     # SAE
+    import sae.const
     DEBUG = False
     DEFAULT_FILE_STORAGE = 'saestorage.SaeStorage'
     DATABASES = {
@@ -66,18 +65,18 @@ DUOSHUO_SHORT_NAME = 'jovesky'
 
 
 #SAE
-ACCESS_KEY='llxjw1wol3'
-SECRET_KEY='zz4xi3mxjzyy5x4lljyii01hmkmi114l42y4llhi'
-APP_NAME='jovesky4django'
+ACCESS_KEY=''
+SECRET_KEY=''
+APP_NAME=''
 
 
 
 #### 以下配置不要改动 ####
 TEMPLATE_DIRS = (
-	os.path.join(os.path.dirname(__file__), '../blog/theme/'+THEME+'/templates/'),
+	os.path.join(os.path.dirname(__file__), '../blog/templates/'),
 )
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), '../blog/theme/'+THEME+'/static/'),
+    os.path.join(os.path.dirname(__file__), '../blog/static/'),
 )
 
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '../uploads')

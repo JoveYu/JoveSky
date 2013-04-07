@@ -1,0 +1,42 @@
+{% extends "classic/base.html" %}
+{% load duoshuo_tags %}
+
+{% block title %}{{ page.title }} - {% endblock %}
+
+{% block content %}
+<div>
+<article>
+  {% if page.title %}
+  <header>
+    <h1 class="entry-title">{{ page.title }}</h1>
+    {% if page.create_time %}<p class="meta"><time datetime="{{ page.create_time|date:"Y-m-d H:i:s O" }}" pubdate>{{ page.create_time }}</time></p>{% endif %}
+  </header>
+  {% endif %}
+  {% block main %}{{ page.content|safe }}{% endblock %}
+  {% if footer %}
+    <footer>
+	  <p class="meta">
+        {% if page.author %}<span class="byline author vcard">Posted by <span class="fn">{{ page.author }}</span></span>{% endif %}
+		<time datetime="{{ page.create_time|date:"Y-m-d H:i:s O" }}" pubdate>{{ page.create_time }}</time>
+        {% if page.tags %}<span class="categories"></span>{% for i in page.tags.all %}<a class="category" href="/tag/{{ i.name }}">{{ i.name }}</a> {% endfor %}{% endif %}
+      </p>
+      {% if sharing %}
+        <div class="sharing">
+			Share to 
+			<a href="http://twitter.com/share" class="twitter-share-button">Tweeter</a>
+			<a href="#" onclick="location.href='http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href);return false;">Weibo</a>
+			<a href="#" onclick="location.href='http://www.delicious.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);return false;">Delicious</a>
+		</div>
+      {% endif %}
+    </footer>
+  {% endif %}
+</article>
+{% if comments %}
+  <section>
+    <h1>Comments</h1>
+    {% duoshuo_comments %}
+  </section>
+{% endif %}
+</div>
+{% endblock %}
+

@@ -10,6 +10,7 @@ from blog.models import Post, Page ,Link
 
 import utils
 
+THEME=settings.THEME
 global_settings={
     'SITE_TITLE':settings.SITE_TITLE,
     'SITE_AUTHOR':settings.SITE_AUTHOR,
@@ -36,7 +37,7 @@ def index(request):
     }
     c.update(global_sidebar)
     
-    return render_to_response('index.html',c,
+    return render_to_response('%s/index.html'%THEME,c,
                 context_instance=RequestContext(request))
 
 def show_post(request, postid):
@@ -60,7 +61,7 @@ def show_post(request, postid):
         'keywords': ','.join([i.name for i in tags]),
     }
     c.update(global_sidebar)
-    return render_to_response('page.html', c
+    return render_to_response('%s/page.html'%THEME, c
                 , context_instance=RequestContext(request))
 
 def show_page(request, pagename):
@@ -78,7 +79,7 @@ def show_page(request, pagename):
         'comments': True,
     }
     c.update(global_sidebar)
-    return render_to_response('page.html', c
+    return render_to_response('%s/page.html'%THEME, c
                 , context_instance=RequestContext(request))
 
 def show_tag(request, tagname):
@@ -94,7 +95,7 @@ def show_tag(request, tagname):
        'posts': utils.get_page(Post.objects.filter(tags__name=tagname), page),
     }
     c.update(global_sidebar)
-    return render_to_response('index.html', c
+    return render_to_response('%s/index.html'%THEME, c
                 , context_instance=RequestContext(request))
     
 def archives(request):
@@ -111,6 +112,6 @@ def archives(request):
         'no_sidebar':False,
     }
     c.update(global_sidebar)
-    return render_to_response('archives.html',c
+    return render_to_response('%s/archives.html'%THEME,c
                 , context_instance=RequestContext(request))
     

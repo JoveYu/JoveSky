@@ -5,6 +5,8 @@
 import markdown
 from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image
+from pagedown.widgets import AdminPagedownWidget
+from forms import PostForm,PageForm
 
 class ImageAdmin(admin.ModelAdmin):
     list_display=['image']
@@ -22,6 +24,8 @@ class PageAdmin(admin.ModelAdmin):
     list_display=['title', 'get_absolute_url', 'author', 'create_time', 'seq']
     prepopulated_fields={"slug":("title",)}    
 
+    form = PageForm  
+
     def save_model(self, request, obj, form, change):
         '''新建，修改页面'''
         obj.author=request.user
@@ -33,6 +37,8 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'create_time']
     list_filter = ['author', 'tags']
     prepopulated_fields={"slug":("title",)}
+
+    form = PostForm  
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user

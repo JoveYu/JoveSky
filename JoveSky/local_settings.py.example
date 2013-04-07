@@ -49,6 +49,7 @@ SITE_AUTHOR = 'Jove'
 # 描述
 SITE_DESC = 'Jove\'s personal site'
 
+
 # 分页大小
 PER_PAGE = 5
 # recent 个数

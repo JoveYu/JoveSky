@@ -74,10 +74,11 @@ APP_NAME=''
 
 #### 以下配置不要改动 ####
 TEMPLATE_DIRS = (
-	os.path.join(os.path.dirname(__file__), '../blog/templates/'),
+    os.path.join(os.path.dirname(__file__), '../blog/templates/'),
 )
 STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), '../blog/static/'),
+    os.path.join(os.path.dirname(__file__), '../pagedown/static/'),
 )
 
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '../uploads')

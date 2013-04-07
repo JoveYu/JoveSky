@@ -40,7 +40,7 @@ def index(request):
     return render_to_response('%s/index.html'%THEME,c,
                 context_instance=RequestContext(request))
 
-def show_post(request, postid):
+def show_post(request, postid , postname):
     '''查看文章'''
     try:
         post = Post.objects.select_related().get(id=int(postid))

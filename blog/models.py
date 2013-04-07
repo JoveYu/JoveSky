@@ -6,6 +6,7 @@
 from django.db import models
 from django.db.models import F
 from django.contrib.auth.models import User
+from django.db.models import permalink
 
 class Image(models.Model):
     '''图片'''
@@ -54,8 +55,9 @@ class Page(models.Model):
     def __unicode__(self):
         return self.title
 
+    @permalink
     def get_absolute_url(self):
-        return u'/%s/' % self.slug
+        return('blog_page',None,{'pagename':self.slug})
 
     class Meta:
         ordering = ['seq']
@@ -77,8 +79,10 @@ class Post(models.Model):
     def __unicode__(self):
         return self.title
 
+    @permalink
     def get_absolute_url(self):
-        return u'/post/%d/%s' % (self.id, self.slug)
+        return('blog_post',None,{'postid':self.id,
+				'postname':self.slug})
 
     class Meta:
         get_latest_by = 'creat_time'

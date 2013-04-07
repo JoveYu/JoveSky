@@ -14,7 +14,7 @@
 
 		<div class="entry-content">
 
-			{{ post.content|safe }}
+			{{ post.content|safe |truncatewords_html:25 }}
 		<a rel="full-article"  href="{{ post.get_absolute_url }}/#more" class="more-link">阅读全文 <span class="meta-nav">→</span></a>
 		</div><!-- .entry-content -->
 

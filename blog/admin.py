@@ -2,7 +2,7 @@
 # −*− coding: UTF−8 −*−
 #
 # Author:   Jove Yu <yushijun110@gmail.com>
-import markdown
+import markdown2
 from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image
 from pagedown.widgets import AdminPagedownWidget
@@ -29,7 +29,7 @@ class PageAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         '''新建，修改页面'''
         obj.author=request.user
-        obj.content=markdown.markdown(obj.markdown,['codehilite'])
+        obj.content = markdown2.markdown(obj.markdown,extras=['fenced-code-blocks'])[:-1]
         
         return super(PageAdmin,self).save_model(request, obj, form, change)
     
@@ -42,8 +42,7 @@ class PostAdmin(admin.ModelAdmin):
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user
-        obj.content = markdown.markdown(obj.markdown,['codehilite'])
-        '''新建，修改文章'''
+        obj.content = markdown2.markdown(obj.markdown,extras=['fenced-code-blocks'])[:-1]
         return super(PostAdmin, self).save_model( request, obj, form, change)
     
 admin.site.register(Tag, TagAdmin)

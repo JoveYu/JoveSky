@@ -120,7 +120,7 @@ ins {
 	text-decoration: none;
 }
 blockquote {
-	background: #F0F0F0 url("/static/jove/images/sprite.gif") no-repeat 14px -175px;
+	background: #F0F0F0 url("../images/sprite.gif") no-repeat 14px -175px;
 	border: 1px solid #D0D0D0;
 	color: #666666;
 	margin: 0 0 20px;
@@ -224,7 +224,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 	padding: 35px 0 18px;
 	width: 962px;
 	margin: 0 auto 25px;
-	background: url('/static/jove/images/bg_footer.png') no-repeat 0 bottom;
+	background: url('../images/bg_footer.png') no-repeat 0 bottom;
 }
 #colophon, #main, #header {
 	width: 902px;
@@ -265,7 +265,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 	height: 100%;
 	float: left;
 	padding: 10px 30px 30px;
-	background: url("/static/jove/images/bg_top.png") no-repeat 0 bottom;
+	background: url("../images/bg_top.png") no-repeat 0 bottom;
 }
 #site-title {
 	float: left;
@@ -276,7 +276,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 }
 #site-title a {
 	color: #555;
-	background: url("/static/jove/images/sprite.gif") no-repeat right 28px;
+	background: url("../images/sprite.gif") no-repeat right 28px;
 	padding: 0 10px 15px 0;
 	font-weight: bold;
 	display: block;
@@ -286,7 +286,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 	float: left;
 }
 #site-title a:hover {
-	background: url("/static/jove/images/sprite.gif") no-repeat right -112px;
+	background: url("../images/sprite.gif") no-repeat right -112px;
 }
 
 /* Menu */
@@ -297,7 +297,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 }
 #access .menu {
 	float: left;
-	background: url("/static/jove/images/sprite.gif") no-repeat 0 0;
+	background: url("../images/sprite.gif") no-repeat 0 0;
 	padding: 0 0 0 10px;
 }
 #access .menu-header {
@@ -366,17 +366,17 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 }
 #rss {
 	float: left;
-	background: url("/static/jove/images/sprite.gif") no-repeat -920px 0;
+	background: url("../images/sprite.gif") no-repeat -920px 0;
 	padding: 0 17px 0 7px;
 	width: 16px;
 }
 #access #rss a, #access #rss a:visited {
-	background: url("/static/jove/images/sprite.gif") no-repeat -1029px 9px;
+	background: url("../images/sprite.gif") no-repeat -1029px 9px;
 	text-indent: -9999em;
 	width: 16px;
 }
 #access #rss a:hover {
-	background: url("/static/jove/images/sprite.gif") no-repeat -1029px -22px;
+	background: url("../images/sprite.gif") no-repeat -1029px -22px;
 }
 
 /* Content ******/
@@ -384,7 +384,7 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 	clear: both;
 	overflow: hidden;
 	padding: 15px 30px 0;
-	background: url("/static/jove/images/bg_middle.png") repeat-y 0 0;
+	background: url("../images/bg_middle.png") repeat-y 0 0;
 }
 #content {
 	margin-bottom: 36px;
@@ -523,37 +523,37 @@ DESCRIPTION: Full width content with no sidebar; used for attachment pages
 	padding-left: 16px;
 }
 .entry-date {
-	background: url('/static/jove/images/sprite.gif') no-repeat -780px -61px;
+	background: url('../images/sprite.gif') no-repeat -780px -61px;
 }
 .entry-meta .author {
-	background: url('/static/jove/images/sprite.gif') no-repeat 0 -62px;
+	background: url('../images/sprite.gif') no-repeat 0 -62px;
 	margin-left: 12px;
 	padding-left: 14px;
 }
 .cat-links {
-	background: url('/static/jove/images/sprite.gif') no-repeat -213px -62px;
+	background: url('../images/sprite.gif') no-repeat -213px -62px;
 	margin-left: 12px;
 	padding-left: 17px;
 }
 .entry-utility .tag-links {
-	background: url('/static/jove/images/sprite.gif') no-repeat -1133px -61px;
+	background: url('../images/sprite.gif') no-repeat -1133px -61px;
 }
 .comments-link {
-	background: url('/static/jove/images/sprite.gif') no-repeat 0 -123px;
+	background: url('../images/sprite.gif') no-repeat 0 -123px;
 	position: absolute;
 	top: 24px;
 	right: 0;
 }
 .single .comments-link {
 	top: 21px;
-	background: url('/static/jove/images/sprite.gif') no-repeat 0 -121px;
+	background: url('../images/sprite.gif') no-repeat 0 -121px;
 }
 .entry-utility .edit-link {
 	position: absolute;
 	right: 0;
 }
 #content .edit-link {
-	background: url('/static/jove/images/sprite.gif') no-repeat -991px -59px;
+	background: url('../images/sprite.gif') no-repeat -991px -59px;
 }
 .entry-meta abbr, entry-utility abbr {
 	border: none;
@@ -1043,10 +1043,10 @@ h3#comments-title {
 	width: 24px;
 }
 .hide {
-	background: url('/static/jove/images/sprite.gif') no-repeat -403px -122px;
+	background: url('../images/sprite.gif') no-repeat -403px -122px;
 }
 .expand {
-	background: url('/static/jove/images/sprite.gif') no-repeat -205px -122px;
+	background: url('../images/sprite.gif') no-repeat -205px -122px;
 }
 /* comment children */
 .commentlist .children {
@@ -1055,12 +1055,12 @@ h3#comments-title {
 	padding: 0 0 12px;
 }
 .children .comment-wrap {
-	background: url('/static/jove/images/comment-sprite.gif') no-repeat -952px bottom;
+	background: url('../images/comment-sprite.gif') no-repeat -952px bottom;
 	margin-right: 70px;
 	padding: 0 0 25px 0;
 }
 .children .inner-wrap {
-	background: url('/static/jove/images/comment-sprite.gif') no-repeat 0 0;
+	background: url('../images/comment-sprite.gif') no-repeat 0 0;
 	padding: 8px 0 0;
 	height: 1%;
 }
@@ -1113,11 +1113,11 @@ h3#comments-title {
 	left: -55px;
 }
 .children .children .comment-wrap {
-	background: url('/static/jove/images/comment-sprite.gif') no-repeat -938px bottom;
+	background: url('../images/comment-sprite.gif') no-repeat -938px bottom;
 	margin: 0 0 0 55px;
 }
 .children .children .inner-wrap {
-	background: url('/static/jove/images/comment-sprite.gif') no-repeat -460px 0;
+	background: url('../images/comment-sprite.gif') no-repeat -460px 0;
 }
 .children .children .comment-body {
 	margin: 0 15px 0 14px;
@@ -1320,7 +1320,7 @@ h3#reply-title {
 	border: 1px solid #7093BD;
 }
 .widget_search #searchsubmit {
-	background: url('/static/jove/images/sprite.gif') no-repeat -781px -125px;
+	background: url('../images/sprite.gif') no-repeat -781px -125px;
 	border: none;
 	text-indent: -999em;
 	height: 16px;
@@ -1434,12 +1434,12 @@ h3#reply-title {
 	-webkit-border-bottom-right-radius: 5px;
 }
 .widget-area ul ul li {
-	background: url('/static/jove/images/sprite.gif') no-repeat -1190px 2px;
+	background: url('../images/sprite.gif') no-repeat -1190px 2px;
 	padding: 0 15px 0 25px;
 	line-height: 220%;
 }
 .widget-area ul ul li:hover {
-	background: url('/static/jove/images/sprite.gif') no-repeat -1460px 2px;
+	background: url('../images/sprite.gif') no-repeat -1460px 2px;
 }
 .widget-area ul ul li.widget_ilast {
 	border-bottom-left-radius: 5px;
@@ -1524,7 +1524,7 @@ h3#reply-title {
 /* Footer ********/
 
 #footer {
-	background: url('/static/jove/images/bg_footer.png') no-repeat 0 top;
+	background: url('../images/bg_footer.png') no-repeat 0 top;
 	overflow: hidden;
 	padding: 5px 0 0;
 	color: #e9e9e9;
@@ -1538,7 +1538,7 @@ h3#reply-title {
 	text-decoration: none;
 }
 #colophon {
-	background: url('/static/jove/images/bg_footer_mid.png') repeat-y 0 0;
+	background: url('../images/bg_footer_mid.png') repeat-y 0 0;
 	overflow: hidden;
 	padding: 0 30px;
 }
@@ -1572,7 +1572,7 @@ h3#reply-title {
 #footer .wp_credit a, #footer .wp_credit a:visited {
 	text-indent: -9999em;
 	width: 24px;
-	background: url('/static/jove/images/sprite.gif') no-repeat -1098px 8px;
+	background: url('../images/sprite.gif') no-repeat -1098px 8px;
 	display: block;
 	border-bottom: none;
 }
@@ -1790,7 +1790,7 @@ body.error404 {
 	padding: 0 0 15px;
 }
 #content_link {
-	background: #FFFFFF url(/static/jove/images/bg_middle.png) repeat-y left center;
+	background: #FFFFFF url(../images/bg_middle.png) repeat-y left center;
 	width: 902px;
 	margin: 0 auto;
 	padding: 0px 30px 25px;

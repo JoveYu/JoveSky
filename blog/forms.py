@@ -1,6 +1,6 @@
 from pagedown.widgets import AdminPagedownWidget
 from django import forms
-from blog.models import Post,Page
+from models import Post,Page
 
 class PostForm(forms.ModelForm):
     markdown = forms.CharField(widget=AdminPagedownWidget())

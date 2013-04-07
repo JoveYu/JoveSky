@@ -8,9 +8,10 @@ from django.db.models import F
 from django.contrib.auth.models import User
 
 class Image(models.Model):
+    '''图片'''
     UPLOAD_ROOT = '%Y/%m'
     title = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
-    image=models.ImageField(upload_to=UPLOAD_ROOT, verbose_name=u'图片')
+    image = models.ImageField(upload_to=UPLOAD_ROOT, verbose_name=u'图片')
     
     def __unicode__(self):
         return self.title
@@ -19,6 +20,7 @@ class Image(models.Model):
         verbose_name_plural = verbose_name = u'图片'
     
 class Category(models.Model):
+    '''分类'''
     name = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
 
     def __unicode__(self):
@@ -28,6 +30,7 @@ class Category(models.Model):
         verbose_name_plural = verbose_name = u'分类'
 
 class Tag(models.Model):
+    '''标签'''
     name = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
     count_post = models.IntegerField(default=0, editable=False, verbose_name=u'文章数')
 
@@ -40,7 +43,7 @@ class Tag(models.Model):
 class Page(models.Model):
     '''单页'''
     title = models.CharField(max_length=100, verbose_name=u'标题')
-    slug = models.CharField(max_length=50, unique=True, verbose_name=u'Slug', help_text=u'页面URL名称')
+    slug = models.SlugField(max_length=50, unique=True, verbose_name=u'Slug', help_text=u'页面URL名称')
     author = models.ForeignKey(User, editable=False, verbose_name=u'作者')
     markdown = models.TextField(verbose_name=u'内容')
     content = models.TextField(blank=True, editable=False)
@@ -62,7 +65,7 @@ class Page(models.Model):
 class Post(models.Model):
     '''文章'''
     title = models.CharField(max_length=100, verbose_name=u'标题')
-    slug = models.CharField(max_length=50, unique=True, verbose_name=u'Slug', help_text=u'页面URL名称')
+    slug = models.SlugField(max_length=50, unique=True, verbose_name=u'Slug', help_text=u'页面URL名称')
     author = models.ForeignKey(User, editable=False , verbose_name=u'作者')
     markdown = models.TextField(verbose_name=u'内容')
     content = models.TextField(blank=True, editable=False)

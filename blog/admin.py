@@ -20,7 +20,8 @@ class LinkAdmin(admin.ModelAdmin):
     
 class PageAdmin(admin.ModelAdmin):
     list_display=['title', 'get_absolute_url', 'author', 'create_time', 'seq']
-    
+    prepopulated_fields={"slug":("title",)}    
+
     def save_model(self, request, obj, form, change):
         '''新建，修改页面'''
         obj.author=request.user
@@ -31,6 +32,7 @@ class PageAdmin(admin.ModelAdmin):
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'author', 'create_time']
     list_filter = ['author', 'tags']
+    prepopulated_fields={"slug":("title",)}
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user

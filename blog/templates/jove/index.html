@@ -26,21 +26,9 @@
 	{% endfor %}
 </div>
 
-<div id="nav-below" class="navigation">
-
-	{% if posts.has_next %}
-	<div class="nav-previous">
-		<a href="?page={{ posts.next_page_number }}" rel="prev"><span class="meta-nav">←</span>上一页</a>
-	</div>
-	{% endif %}
-
-	{% if posts.has_previous %}
-	<div class="nav-next">
-		<a href="?page={{ posts.previous_page_number }}" rel="next">下一页 <span class="meta-nav">→</span></a>
-	</div>
-	{% endif %}
-
-</div>
+{% if posts.paginator.num_pages > 1 %}
+    {% include "jove/paginator.html" %}
+{% endif %}
 
 {% endblock %}
 

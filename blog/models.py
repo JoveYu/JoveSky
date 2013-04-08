@@ -39,6 +39,10 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.name
 
+    @permalink
+    def get_absolute_url(self):
+        return('blog_tag',None,{'tagname':self.name})
+
     class Meta:
         verbose_name_plural = verbose_name = u'标签'
         

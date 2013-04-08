@@ -135,6 +135,7 @@ pre {
 	margin-bottom: 14px;
 	padding: 15px;
 	border: 1px solid #d0d0d0;
+	line-height: 140%;
 }
 pre, code {
 	font-family: "Lucida Console", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;

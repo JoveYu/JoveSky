@@ -27,6 +27,10 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+    @permalink
+    def get_absolute_url(self):
+        return('blog_category',None,{'categoryname':self.name})
+
     class Meta:
         verbose_name_plural = verbose_name = u'分类'
 

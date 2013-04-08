@@ -6,7 +6,7 @@ from django.http import Http404, HttpResponse
 from django.conf import settings
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from blog.models import Post, Page ,Link ,Tag
+from blog.models import Post, Page ,Link ,Tag, Category
 from django.db.models import Q, Count, Max, Min
 
 import utils
@@ -40,6 +40,7 @@ def common_response(request):
         'recposts':utils.recent_post(Post),
         'links':Link.objects.all(),
         'pages':Page.objects.all(),
+        'categorys':Category.objects.all(),
         'tags':tags,
     }
     return global_sidebar
@@ -115,6 +116,22 @@ def show_tag(request, tagname):
        'title': tagname + ' - Tag',
        'no_sidebar':False,
        'posts': utils.get_page(Post.objects.filter(tags__name=tagname), page),
+    }
+    c.update(common_response(request))
+    return render_to_response('%s/index.html'%THEME, c
+                , context_instance=RequestContext(request))
+
+def show_category(request, categoryname):
+    '''按分类查看'''
+    try:
+        page = int(request.GET.get('page', '1'))
+    except ValueError:
+        page = 1
+    c={
+       'settings':global_settings,
+       'title': tagname + ' - Category',
+       'no_sidebar':False,
+       'posts': utils.get_page(Post.objects.filter(category__name=categoryname), page),
     }
     c.update(common_response(request))
     return render_to_response('%s/index.html'%THEME, c

@@ -11,6 +11,16 @@
 
 </li>
 
+<li id="categories" class="widget-container widget_categories">
+	<h3 class="widget-title">分类目录</h3>
+	<ul>
+		{% for category in categorys %}
+		<li>
+			<a href="{{ category.get_absolute_url }}" title="{{ category.name }}">{{ category.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</li>
 
 <li id="recent-posts" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">近期文章</h3>

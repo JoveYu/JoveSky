@@ -129,7 +129,7 @@ def show_category(request, categoryname):
         page = 1
     c={
        'settings':global_settings,
-       'title': tagname + ' - Category',
+       'title': categoryname + ' - Category',
        'no_sidebar':False,
        'posts': utils.get_page(Post.objects.filter(category__name=categoryname), page),
     }

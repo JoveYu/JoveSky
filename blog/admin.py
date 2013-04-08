@@ -7,6 +7,7 @@ from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image ,PostTag
 from pagedown.widgets import AdminPagedownWidget
 from forms import PostForm,PageForm
+from sitemap import ping_all_search_engines
 
 class PostTagInline(admin.TabularInline):
     model = PostTag
@@ -47,6 +48,10 @@ class PostAdmin(admin.ModelAdmin):
     inlines = (PostTagInline,)
     
     def save_model(self, request, obj, form, change):
+
+        #ping_google
+        ping_all_search_engines()
+        
         obj.author = request.user
         obj.content = markdown.markdown(obj.markdown,['codehilite'])
         return super(PostAdmin, self).save_model( request, obj, form, change)

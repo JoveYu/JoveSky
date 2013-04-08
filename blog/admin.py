@@ -4,15 +4,19 @@
 # Author:   Jove Yu <yushijun110@gmail.com>
 import markdown
 from django.contrib import admin
-from models import Tag,Page,Post,Link,Category,Image
+from models import Tag,Page,Post,Link,Category,Image ,PostTag
 from pagedown.widgets import AdminPagedownWidget
 from forms import PostForm,PageForm
+
+class PostTagInline(admin.TabularInline):
+    model = PostTag
 
 class ImageAdmin(admin.ModelAdmin):
     list_display=['image']
 
 class TagAdmin(admin.ModelAdmin):
     list_display=['name','count_post']
+    inlines = (PostTagInline,)
     
 class CategoryAdmin(admin.ModelAdmin):
     list_display=['name']
@@ -39,6 +43,8 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields={"slug":("title",)}
 
     form = PostForm  
+
+    inlines = (PostTagInline,)
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user

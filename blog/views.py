@@ -2,7 +2,7 @@
 # −*− coding: UTF−8 −*−
 #
 # Author:   Jove Yu <yushijun110@gmail.com>
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.conf import settings
 from django.template import RequestContext
 from django.shortcuts import render_to_response
@@ -92,7 +92,9 @@ def show_page(request, pagename):
     try:
         post = Page.objects.select_related().get(slug=pagename)
     except:
-        raise Http404
+        #raise Http404
+        #for redirect
+        return HttpResponseRedirect('http://jovesky.sinaapp.com/'+pagename)
 
     c={
         'settings':global_settings,

@@ -25,6 +25,6 @@ urlpatterns += patterns('',
 
 )
 urlpatterns += patterns('blog.views',
-    url(r'^(?P<pagename>\w+)/', 'show_page', name='blog_page'),
+    url(r'^(?P<pagename>[-\w\./\s]*)/', 'show_page', name='blog_page'),
 )
 

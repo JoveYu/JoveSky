@@ -37,6 +37,15 @@
 	</ul>
 </li>
 
+<li id="tagclouds" class="widget-container">
+	<h3 class="widget-title">标签云</h3>
+	<div class="tagcloud">
+	{% for tag in tags %}
+        <a href="{{ tag.get_absolute_url }}" style="font-size: {{tag.font_size}}px;">{{ tag.name }}</a>
+	{% endfor %}
+	</div>
+</li>
+
 <li id="recent-visiter" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">最新访客</h3>
 	<ul class="ds-recent-visitors"><li></li></ul>

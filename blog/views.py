@@ -6,11 +6,16 @@ from django.http import Http404, HttpResponse
 from django.conf import settings
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from blog.models import Post, Page ,Link
+from blog.models import Post, Page ,Link ,Tag
+from django.db.models import Q, Count, Max, Min
 
 import utils
 
 THEME=settings.THEME
+MAX_FONT_SIZE = 30
+MIN_FONT_SIZE = 12
+MINUS_FONT_SIZE = MAX_FONT_SIZE - MIN_FONT_SIZE
+
 global_settings={
     'SITE_TITLE':settings.SITE_TITLE,
     'SITE_AUTHOR':settings.SITE_AUTHOR,
@@ -18,11 +23,28 @@ global_settings={
     'SITE_SUBTITLE':settings.SITE_SUBTITLE,
     'SITE_URL':settings.SITE_URL,
 }
-global_sidebar={
-    'recposts':utils.recent_post(Post),
-    'links':Link.objects.all(),
-    'pages':Page.objects.all(),
-}
+
+def common_response(request):
+    tags = Tag.objects.annotate(n_posts=Count("posts"))[:25]
+    if tags:
+        tag_max_posts = tags.aggregate(Max("n_posts"))['n_posts__max']
+        tag_min_posts = tags.aggregate(Min("n_posts"))['n_posts__min']
+        for tag in tags:
+            if tag_max_posts - tag_min_posts > 0:
+                tag.font_size = MIN_FONT_SIZE \
+                + MINUS_FONT_SIZE*(tag.n_posts-tag_min_posts)/(tag_max_posts-tag_min_posts)
+            else:
+                tag.font_size = MINUS_FONT_SIZE
+
+    global_sidebar={
+        'recposts':utils.recent_post(Post),
+        'links':Link.objects.all(),
+        'pages':Page.objects.all(),
+        'tags':tags,
+    }
+    return global_sidebar
+
+
 def index(request):
     '''首页及分页'''
     try:
@@ -35,7 +57,7 @@ def index(request):
         'settings':global_settings,
         'no_sidebar':False,
     }
-    c.update(global_sidebar)
+    c.update(common_response(request))
     
     return render_to_response('%s/index.html'%THEME,c,
                 context_instance=RequestContext(request))
@@ -60,7 +82,7 @@ def show_post(request, postid , postname):
         'tags': tags,
         'keywords': ','.join([i.name for i in tags]),
     }
-    c.update(global_sidebar)
+    c.update(common_response(request))
     return render_to_response('%s/page.html'%THEME, c
                 , context_instance=RequestContext(request))
 
@@ -78,7 +100,7 @@ def show_page(request, pagename):
         'sharing': False,
         'comments': True,
     }
-    c.update(global_sidebar)
+    c.update(common_response(request))
     return render_to_response('%s/page.html'%THEME, c
                 , context_instance=RequestContext(request))
 
@@ -94,7 +116,7 @@ def show_tag(request, tagname):
        'no_sidebar':False,
        'posts': utils.get_page(Post.objects.filter(tags__name=tagname), page),
     }
-    c.update(global_sidebar)
+    c.update(common_response(request))
     return render_to_response('%s/index.html'%THEME, c
                 , context_instance=RequestContext(request))
     
@@ -111,7 +133,7 @@ def archives(request):
         'page': page,
         'no_sidebar':False,
     }
-    c.update(global_sidebar)
+    c.update(common_response(request))
     return render_to_response('%s/archives.html'%THEME,c
                 , context_instance=RequestContext(request))
     

@@ -34,6 +34,7 @@ class Tag(models.Model):
     '''标签'''
     name = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
     count_post = models.IntegerField(default=0, editable=False, verbose_name=u'文章数')
+    posts = models.ManyToManyField('Post', through='PostTag', verbose_name="文章")
 
     def __unicode__(self):
         return self.name
@@ -73,9 +74,9 @@ class Post(models.Model):
     content = models.TextField(blank=True, editable=False)
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'发布日期')
     allow_comment = models.BooleanField(default=False, verbose_name=u'允许评论')
-    tags = models.ManyToManyField(Tag, blank=True, verbose_name=u'标签')
     counts = models.IntegerField(default=0, editable=False, verbose_name=u'点击数')
     category= models.ForeignKey(Category ,  verbose_name=u'分类')
+    tags = models.ManyToManyField(Tag, blank=True, through="PostTag", verbose_name=u'标签')
     def __unicode__(self):
         return self.title
 
@@ -102,3 +103,14 @@ class Link(models.Model):
     class Meta:
         ordering=['seq']
         verbose_name_plural=verbose_name=u'链接'
+
+class PostTag(models.Model):
+    post = models.ForeignKey(Post)
+    tag = models.ForeignKey(Tag)
+    
+    class Meta:
+        verbose_name = "文章标签"
+        verbose_name_plural = "文章标签"
+        
+    def __unicode__(self):
+        return unicode(self.tag)

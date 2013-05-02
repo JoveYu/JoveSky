@@ -2,6 +2,14 @@
 
 JoveSky is a simple blog powered by django
 
+>       __               _____ __          
+>      / /___ _   _____ / ___// /____  __  
+> __  / / __ \ | / / _ \\__ \/ //_/ / / /  
+>/ /_/ / /_/ / |/ /  __/__/ / ,< / /_/ /   
+>\____/\____/|___/\___/____/_/|_|\__, /  
+>                               /____/   
+
+
 ## Features
 
 + [Markdown](http://daringfireball.net/projects/markdown/)

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-import os, time, random 
+import os, time, random
 from django.core.files.base import File
 from django.core.files.storage import Storage
-from django.conf import settings 
+from django.conf import settings
 from django.core.files import File
 import sae.storage
 try:
@@ -11,14 +11,14 @@ except ImportError:
     from StringIO import StringIO
 
 class SaeStorage(Storage):
-     
+
     def __init__(self, location="uploads",
-            accesskey=settings.ACCESS_KEY, 
-            secretkey=settings.SECRET_KEY, 
+            accesskey=settings.ACCESS_KEY,
+            secretkey=settings.SECRET_KEY,
             prefix=settings.APP_NAME,
             media_root=settings.MEDIA_ROOT,
             media_url=settings.MEDIA_URL,
-            ): 
+            ):
         self.accesskey = accesskey
         self.secretkey = secretkey
         self.prefix = prefix
@@ -45,7 +45,7 @@ class SaeStorage(Storage):
     def _open(self, name, mode="rb"):
         return SaeStorageFile(name, self, mode=mode)
 
-    def _save(self, name, content): 
+    def _save(self, name, content):
         content.open()
         if hasattr(content, 'chunks'):
             content_str = ''.join(chunk for chunk in content.chunks())
@@ -76,7 +76,7 @@ class SaeStorage(Storage):
         #sae no folder
         files = self.client.list(self.prefix)
         return ((), tuple(f['name'] for f in files))
-        
+
     def size(self, name):
         try:
             stat = self.client.stat(self.prefix, name)
@@ -86,17 +86,17 @@ class SaeStorage(Storage):
 
     def url(self, name):
         return self.client.url(self.prefix, name)
-        
+
     def isdir(self, name):
         return False if name else True
 
     def isfile(self, name):
         return self.exists(name) if name else False
-        
+
     def modified_time(self, name):
         from datetime import datetime
         return datetime.now()
-        
+
 class SaeStorageFile(File):
     """docstring for SaeStorageFile"""
     def __init__(self, name, storage, mode):
@@ -122,7 +122,7 @@ class SaeStorageFile(File):
             return self.file.read(num_bytes)
         else:
             return self.file.read()
-            
+
     def write(self, content):
         if 'w' not in self._mode:
             raise AttributeError("File was opened for read-only access.")

@@ -138,7 +138,8 @@ pre {
 	line-height: 140%;
 }
 pre, code {
-	font-family: "Lucida Console", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	/*font-family: "Lucida Console", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;*/
+	font-family: "DejaVu Sans Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace ;
 }
 abbr, acronym {
 	border-bottom: 1px dotted #666;

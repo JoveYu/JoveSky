@@ -120,7 +120,8 @@ ins {
 	text-decoration: none;
 }
 blockquote {
-	background: #F0F0F0 url("../images/sprite.gif") no-repeat 14px -175px;
+	background: #FFFFFF url("../images/sprite.gif") no-repeat 14px -175px;
+	/*background: #F0F0F0 url("../images/sprite.gif") no-repeat 14px -175px;*/
 	border: 1px solid #D0D0D0;
 	color: #666666;
 	margin: 0 0 20px;

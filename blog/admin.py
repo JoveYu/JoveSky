@@ -34,7 +34,7 @@ class PageAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         '''新建，修改页面'''
         obj.author=request.user
-        obj.content = markdown.markdown(obj.markdown,['codehilite'])
+        obj.content = markdown.markdown(obj.markdown,['fenced_code', 'codehilite'])#(linenums=True)
         
         return super(PageAdmin,self).save_model(request, obj, form, change)
     
@@ -53,7 +53,7 @@ class PostAdmin(admin.ModelAdmin):
         ping_all_search_engines()
         
         obj.author = request.user
-        obj.content = markdown.markdown(obj.markdown,['codehilite'])
+        obj.content = markdown.markdown(obj.markdown,['fenced_code', 'codehilite'])
         return super(PostAdmin, self).save_model( request, obj, form, change)
     
 admin.site.register(Tag, TagAdmin)

@@ -138,6 +138,11 @@ pre {
 	border: 1px solid #d0d0d0;
 	line-height: 140%;
 }
+
+pre {   
+ overflow: auto; overflow-y:hidden
+}
+
 pre, code {
 	/*font-family: "Lucida Console", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;*/
 	font-family: "DejaVu Sans Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace ;

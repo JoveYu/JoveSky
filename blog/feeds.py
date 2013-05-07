@@ -9,7 +9,7 @@ from django.contrib.syndication.views import Feed
 
 class LatestPostFeed(Feed):
     title = settings.SITE_TITLE
-    link = 'feed'
+    link = '/feed'
     description  = settings.SITE_DESC
 
     def items(self):

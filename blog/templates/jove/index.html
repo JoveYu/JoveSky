@@ -9,7 +9,7 @@
 		<h2 class="entry-title"><a href="{{ post.get_absolute_url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h2>
 
 		<div class="entry-meta">
-			<span class="entry-date">{{ post.create_time|date:"Y-m-d" }}</span><span class="author vcard">{{ post.author }}</span><span class="cat-links"><a href="http://jovesky.com/" title="" rel="category tag">{{ post.category }}</a></span>
+			<span class="entry-date">{{ post.create_time|date:"Y-m-d" }}</span><span class="author vcard">{{ post.author }}</span><span class="cat-links"><a href="{{ post.category.get_absolute_url }}" title="{{ post.category }}" rel="category tag">{{ post.category }}</a></span>
 		</div><!-- .entry-meta -->
 
 		<div class="entry-content">

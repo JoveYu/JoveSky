@@ -122,14 +122,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    'grappelli',
     'django.contrib.admin',
     'django.contrib.sitemaps',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'blog',
     'duoshuo',
-    'epiceditor',
+    'pagedown',
 )
 
 # A sample logging configuration. The only tangible logging

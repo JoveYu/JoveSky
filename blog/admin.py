@@ -38,7 +38,7 @@ class PageAdmin(admin.ModelAdmin):
         return super(PageAdmin,self).save_model(request, obj, form, change)
     
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'author', 'create_time']
+    list_display = ['title','author', 'slug', 'counts', 'category', 'create_time']
     list_filter = ['author', 'tags']
     prepopulated_fields={"slug":("title",)}
 

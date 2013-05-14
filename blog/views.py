@@ -92,9 +92,9 @@ def show_page(request, pagename):
     try:
         post = Page.objects.select_related().get(slug=pagename)
     except:
-        #raise Http404
+        raise Http404
         #for redirect
-        return HttpResponseRedirect('http://jovesky.sinaapp.com/'+pagename)
+        #return HttpResponseRedirect('http://jovesky.sinaapp.com/'+pagename)
 
     c={
         'settings':global_settings,

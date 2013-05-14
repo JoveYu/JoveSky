@@ -67,8 +67,12 @@ def show_post(request, postid , postname):
     '''查看文章'''
     try:
         post = Post.objects.select_related().get(id=int(postid))
+        if post.slug != postname:
+            raise Http404   
     except:
         raise Http404
+    
+    
 
     post.counts += 1
     post.save()

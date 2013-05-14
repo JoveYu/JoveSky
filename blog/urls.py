@@ -9,7 +9,7 @@ from sitemap import PostSitemap
 
 urlpatterns = patterns('blog.views',
     url(r'^$','index' ,name='blog_index'),
-    url(r'^post/(?P<postid>\d+)/(?P<postname>[-\w\./\s]+)/', 'show_post', name='blog_post'),
+    url(r'^post/(?P<postid>\d+)/(?P<postname>[-\w\./\s]+)/$', 'show_post', name='blog_post'),
     url(r'^tag/(?P<tagname>.+)/$', 'show_tag', name='blog_tag'),
     url(r'^category/(?P<categoryname>.+)/$', 'show_category', name='blog_category'),
     url(r'^archives/$', 'archives', name='blog_archives'),

@@ -13,13 +13,13 @@ class Image(models.Model):
     UPLOAD_ROOT = '%Y/%m'
     title = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
     image = models.ImageField(upload_to=UPLOAD_ROOT, verbose_name=u'图片')
-    
+
     def __unicode__(self):
         return self.title
 
     class Meta:
         verbose_name_plural = verbose_name = u'图片'
-    
+
 class Category(models.Model):
     '''分类'''
     name = models.CharField(max_length=100, unique=True, verbose_name=u'名称')
@@ -49,7 +49,7 @@ class Tag(models.Model):
 
     class Meta:
         verbose_name_plural = verbose_name = u'标签'
-        
+
 class Page(models.Model):
     '''单页'''
     title = models.CharField(max_length=100, verbose_name=u'标题')
@@ -91,7 +91,7 @@ class Post(models.Model):
     @permalink
     def get_absolute_url(self):
         return('blog_post',None,{'postid':self.id,
-				'postname':self.slug})
+                'postname':self.slug})
 
     class Meta:
         get_latest_by = 'creat_time'
@@ -115,10 +115,10 @@ class Link(models.Model):
 class PostTag(models.Model):
     post = models.ForeignKey(Post)
     tag = models.ForeignKey(Tag)
-    
+
     class Meta:
         verbose_name = "文章标签"
         verbose_name_plural = "文章标签"
-        
+
     def __unicode__(self):
         return unicode(self.tag)

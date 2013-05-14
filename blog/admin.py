@@ -5,7 +5,6 @@
 import markdown
 from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image ,PostTag
-from pagedown.widgets import AdminPagedownWidget
 from forms import PostForm,PageForm
 from sitemap import ping_all_search_engines
 

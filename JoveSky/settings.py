@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'blog',
     'duoshuo',
-    'pagedown',
+    'epiceditor',
 )
 
 # A sample logging configuration. The only tangible logging

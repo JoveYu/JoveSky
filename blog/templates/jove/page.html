@@ -15,13 +15,38 @@
 			{% endif %}
 			{% block main %}
 			<div class="entry-content">
-
 				{{ page.content|safe }}
-			</div><!-- .entry-content -->{% endblock %}
-			{% if footer %}
-
-			{% endif %}
+			<div id="announce" class="msg-info">
+				<strong>声明:</strong> 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow external"><abbr title="署名-非商业性使用-相同方式共享">BY-NC-SA</abbr></a> 协议进行授权. 转载请注明转自: <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+			</div>
+			</div><!-- .entry-content -->
+			{% comment %}
+			<div id="entry-author-info">
+			    <div id="author-avatar"><img alt="" src="" class="avatar avatar-60 photo" height="60" width="60">
+			    </div>
+			    <!-- #author-avatar -->
+			    <div id="author-description"><h2>关于 Jove</h2>Jove 是一名普通的大学生，爱好编程，爱好Linux，找个地方记录自己的学习生活，希望结交更多的朋友！				<div id="author-link">
+					<a href="http://jovesky.sinaapp.com/author/jove/">查看作者为 Jove 的全部日志<span class="meta-nav">→</span></a>
+				</div>
+				<!-- #author-link	-->
+			    </div>
+			    <!-- #author-description -->
+			</div>
+			<div class="entry-utility">
+			    <span class="tag-links"></span>
+			</div>
+			<!-- .entry-utility -->
+			{% endcomment %}
+			
+			{% endblock %}
 		</div>
+		<!-- #post-## -->
+		{% if footer %}
+        <div id="nav-below" class="navigation">
+            <div class="nav-previous"><a href="" rel="prev"><span class="meta-nav">←</span></a></div>
+            <div class="nav-next"><a href="" rel="next"><span class="meta-nav">→</span></a></div>
+        </div>
+		{% endif %}
 	{% if comments %}
 
 	<a name="comments">{% duoshuo_comments %}</a>

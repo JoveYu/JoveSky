@@ -81,7 +81,7 @@ def show_post(request, postid , postname):
     c={
         'settings':global_settings,
         'page': post,
-        'footer': True,
+        'footer': False,
         'sharing': True,
         'comments': True,
         'tags': tags,

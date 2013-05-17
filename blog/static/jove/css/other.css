@@ -1,0 +1,26 @@
+#announce {
+	margin:20px 0 10px;
+	font-size:100%;
+}
+.msg-info,.msg-warn,.msg-error,#notice {
+	background:#FFFBD1 url(//style.neoease.org/img/paled/icon.png?v=031516) no-repeat;
+	background-position:10px -1191px !important;
+	background-position:10px -1190px;
+	line-height:165%;
+	padding:7px 10px 7px 36px;
+	margin-top:10px;
+	border:1px solid #FDDC9B;
+	font-size:90%;
+}
+.msg-error {
+	background-color:#FFE9EE;
+	background-position:10px -1591px !important;
+	background-position:10px -1590px;
+	border-color:#F6CBCA;
+}
+.msg-info,#notice {
+	background-color:#EEF4FF;
+	background-position:10px -1991px !important;
+	background-position:10px -1990px;
+	border-color:#CEE1F6;
+}

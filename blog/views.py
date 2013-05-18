@@ -92,7 +92,7 @@ def show_post(request, postid , postname):
                 , context_instance=RequestContext(request))
 
 def show_page(request, pagename):
-    '''查看文章'''
+    '''查看页面'''
     try:
         post = Page.objects.select_related().get(slug=pagename)
     except:
@@ -103,7 +103,7 @@ def show_page(request, pagename):
     c={
         'settings':global_settings,
         'page': post,
-        'footer': True,
+        'footer': False,
         'sharing': False,
         'comments': True,
     }

@@ -18,9 +18,16 @@
 	background-position:10px -1590px;
 	border-color:#F6CBCA;
 }
+/*
 .msg-info,#notice {
 	background-color:#EEF4FF;
 	background-position:10px -1991px !important;
 	background-position:10px -1990px;
 	border-color:#CEE1F6;
+}*/
+.msg-info,#notice {
+	background-color:#EEE;
+	background-position:10px -1991px !important;
+	background-position:10px -1990px;
+	border-color:#D0D0D0;
 }

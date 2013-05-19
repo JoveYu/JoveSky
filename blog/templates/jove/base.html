@@ -9,8 +9,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="/static/jove/css/style.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="/static/jove/css/pygments/github.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="/static/jove/css/other.css"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/jove/js/all.js"></script>
+    <script type="text/javascript" src="/static/jove/js/other.js"></script>
     <link rel="alternate" type="application/rss+xml" title="{{ settings.SITE_TITLE }} &raquo; Feed" href="/feed/" />
   </head>
   
@@ -90,7 +89,7 @@
                     搜索：
                   </label>
                   <input type="hidden" name="q" value="site:{{ settings.SITE_URL }}"/>
-                  <input type="text" value="" name="q" id="s" />
+                  <input type="text" name="q" id="s" />
                   <input type="submit" id="searchsubmit" value="搜索" />
                 </div>
               </form>

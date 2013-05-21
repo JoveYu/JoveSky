@@ -3,28 +3,19 @@
 	{% if posts.has_previous %}
 	<a class="pages-numbers" href="?page={{ posts.previous_page_number }}" rel="prev">←上一页</a>
 	{% endif %}
-
-	<span class="pages">
-		Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
-        </span>
-	
+	<span class="pages">Page {{ posts.number }} of {{ posts.paginator.num_pages }}.</span>
 	{% if posts.number > 3 %}
 	<a class="pages-numbers" href="?page=1" rel="prev">1</a>...
 	{% endif %}
-
 	{% if posts.has_previous %}
 	<a class="pages-numbers" href="?page={{ posts.number|add:"-1" }}" rel="prev">{{ posts.number|add:"-1" }}</a>
 	{% endif %}
-
 	<span class="pages-numbers current" >{{ posts.number}}</span>
-
 	{% if posts.has_next %}
 	<a class="pages-numbers" href="?page={{ posts.number|add:"1" }}" rel="prev">{{ posts.number|add:"1" }}</a>
 	{% endif %}
-	
-
 	{% if posts.number|add:"3" < posts.paginator.num_pages %}
-		...<a class="pages-numbers" href="?page={{ posts.paginator.num_pages }}" rel="prev">{{ posts.paginator.num_pages }}</a>
+	...<a class="pages-numbers" href="?page={{ posts.paginator.num_pages }}" rel="prev">{{ posts.paginator.num_pages }}</a>
 	{% endif %}
 	{% if  posts.has_next  %}
 	<a class="pages-numbers" href="?page={{ posts.next_page_number }}" rel="next">下一页→</a>

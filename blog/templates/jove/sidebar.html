@@ -8,16 +8,13 @@
 <li id="recent-comment" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">最新评论</h3>
 	<ul class="ds-recent-comments" style="padding: 5px;"><li></li></ul>
-
 </li>
 
 <li id="categories" class="widget-container widget_categories">
 	<h3 class="widget-title">分类目录</h3>
 	<ul>
 		{% for category in categorys %}
-		<li>
-			<a href="{{ category.get_absolute_url }}" title="{{ category.name }}">{{ category.name }}</a>
-		</li>
+		<li><a href="{{ category.get_absolute_url }}" title="{{ category.name }}">{{ category.name }}</a></li>
 		{% endfor %}
 	</ul>
 </li>
@@ -25,13 +22,9 @@
 <li id="recent-posts" class="widget-container widget_recent_entries">
 	<h3 class="widget-title">近期文章</h3>
 	<ul>
-
 		{% for post in recposts %}
-		<li>
-			<a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
-		</li>
+		<li><a href="{{ post.get_absolute_url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 		{% endfor %}
-
 	</ul>
 </li>
 
@@ -39,9 +32,7 @@
 	<h3 class="widget-title">友情链接</h3>
 	<ul class="xoxo blogroll">
 		{% for link in links %}
-		<li>
-			<a href="{{ link.url }}" title="{{ link.name }}">{{ link.name }}</a>
-		</li>
+		<li><a href="{{ link.url }}" title="{{ link.name }}">{{ link.name }}</a></li>
 		{% endfor %}
 
 	</ul>

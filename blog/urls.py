@@ -17,11 +17,11 @@ urlpatterns = patterns('blog.views',
 
 )
 
-sitemaps = {  
-    'Post': PostSitemap,       
+sitemaps = {
+    'Post': PostSitemap,
 }
 urlpatterns += patterns('',
-    (r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}), 
+    (r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
 )
 urlpatterns += patterns('blog.views',

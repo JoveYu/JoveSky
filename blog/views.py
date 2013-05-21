@@ -59,7 +59,7 @@ def index(request):
         'no_sidebar':False,
     }
     c.update(common_response(request))
-    
+
     return render_to_response('%s/index.html'%THEME,c,
                 context_instance=RequestContext(request))
 
@@ -68,16 +68,16 @@ def show_post(request, postid , postname):
     try:
         post = Post.objects.select_related().get(id=int(postid))
         if post.slug != postname:
-            raise Http404   
+            raise Http404
     except:
         raise Http404
-    
-    
+
+
 
     post.counts += 1
     post.save()
     tags = post.tags.all()
-    
+
     c={
         'settings':global_settings,
         'page': post,
@@ -142,7 +142,7 @@ def show_category(request, categoryname):
     c.update(common_response(request))
     return render_to_response('%s/index.html'%THEME, c
                 , context_instance=RequestContext(request))
-    
+
 def archives(request):
     '''归档页面'''
     posts = [Post(**i) for i in Post.objects.values('id', 'title', 'create_time', 'slug')]
@@ -159,4 +159,4 @@ def archives(request):
     c.update(common_response(request))
     return render_to_response('%s/archives.html'%THEME,c
                 , context_instance=RequestContext(request))
-    
+

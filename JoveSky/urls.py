@@ -22,6 +22,6 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     url(r'^', include('blog.urls')),
-    
+
 )
 

@@ -1,7 +1,11 @@
-#!/usr/bin/env python
-# −*− coding: UTF−8 −*−
-#
-# Author:   Jove Yu <yushijun110@gmail.com>
+# -*- coding: utf-8 -*-
+"""
+File: utils.py
+Author: Jove Yu
+Email: yushijun110@gmail.com
+Github: https://github.com/JoveYu
+Description: tool for blog app
+"""
 import re
 from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
@@ -24,5 +28,5 @@ def recent_post(Post, num=settings.RECENT_COUNT, quick=True):
 	return Post.objects.all()[:num]
 
 def is_slug(slug):
-	'''slug check'''
+	'''slug 检测'''
 	return re.match(r'^[a-z0-9A-Z_\-]+$', slug)

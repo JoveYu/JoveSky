@@ -70,7 +70,8 @@ ACCESS_KEY=''
 SECRET_KEY=''
 APP_NAME=''
 
-
+#微信TOKEN
+WECHAT_TOKEN = ''
 
 #### 以下配置不要改动 ####
 

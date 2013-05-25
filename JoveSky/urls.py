@@ -21,7 +21,10 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
-    url(r'^', include('blog.urls')),
+    url(r'^wechat/',include('wechat.urls')),
+)
 
+urlpatterns += patterns('',
+    url(r'^', include('blog.urls')),
 )
 

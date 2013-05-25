@@ -1,7 +1,11 @@
-#!/usr/bin/env python
-# −*− coding: UTF−8 −*−
-#
-# Author:   Jove Yu <yushijun110@gmail.com>
+# -*- coding: utf-8 -*-
+"""
+File: views.py
+Author: Jove Yu
+Email: yushijun110@gmail.com
+Github: https://github.com/JoveYu
+Description: views for blog app
+"""
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.conf import settings
 from django.template import RequestContext
@@ -11,7 +15,7 @@ from django.db.models import Q, Count, Max, Min
 
 import utils
 
-THEME=settings.THEME
+THEME = getattr(settings, "THEME", None)
 MAX_FONT_SIZE = 30
 MIN_FONT_SIZE = 12
 MINUS_FONT_SIZE = MAX_FONT_SIZE - MIN_FONT_SIZE
@@ -97,8 +101,6 @@ def show_page(request, pagename):
         post = Page.objects.select_related().get(slug=pagename)
     except:
         raise Http404
-        #for redirect
-        #return HttpResponseRedirect('http://jovesky.sinaapp.com/'+pagename)
 
     c={
         'settings':global_settings,

@@ -1,7 +1,11 @@
-#!/usr/bin/env python
-# −*− coding: UTF−8 −*−
-#
-# Author:   Jove Yu <yushijun110@gmail.com>
+# -*- coding: utf-8 -*-
+"""
+File: sitemap.py
+Author: Jove Yu
+Email: yushijun110@gmail.com
+Github: https://github.com/JoveYu
+Description: sitemap for blog app
+"""
 
 from django.contrib.sitemaps import Sitemap
 from django.contrib.sitemaps import ping_google

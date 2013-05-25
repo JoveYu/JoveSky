@@ -1,7 +1,11 @@
-#!/usr/bin/env python
-# −*− coding: UTF−8 −*−
-#
-# Author:   Jove Yu <yushijun110@gmail.com>
+# -*- coding: utf-8 -*-
+"""
+File: admin.py
+Author: Jove Yu
+Email: yushijun110@gmail.com
+Github: https://github.com/JoveYu
+Description: admin for blog app
+"""
 import markdown
 from django.contrib import admin
 from models import Tag,Page,Post,Link,Category,Image ,PostTag

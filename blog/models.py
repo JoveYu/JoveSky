@@ -1,7 +1,11 @@
-#!/usr/bin/env python
-# −*− coding: UTF−8 −*−
-#
-# Author:   Jove Yu <yushijun110@gmail.com>
+# -*- coding: utf-8 -*-
+"""
+File: models.py
+Author: Jove Yu
+Email: yushijun110@gmail.com
+Github: https://github.com/JoveYu
+Description: models for blog app
+"""
 
 from django.db import models
 from django.contrib.auth.models import User

@@ -129,7 +129,6 @@ INSTALLED_APPS = (
     'blog',
     'duoshuo',
     'pagedown',
-    'wechat',
 )
 
 # A sample logging configuration. The only tangible logging

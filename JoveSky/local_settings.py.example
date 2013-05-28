@@ -57,8 +57,6 @@ RECENT_COUNT = 5
 # feed 数量
 FEED_COUNT = 10
 
-# google 统计的 id
-GA_ID = 'UA-15372596-1'
 
 # 多说评论设置
 DUOSHUO_SECRET = ''
@@ -72,6 +70,9 @@ APP_NAME=''
 
 #微信TOKEN
 WECHAT_TOKEN = ''
+
+#缩略图大小
+IMAGE_WIDTH = 580
 
 #### 以下配置不要改动 ####
 

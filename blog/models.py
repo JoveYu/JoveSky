@@ -24,33 +24,33 @@ class Image(models.Model):
     #自动缩略
     def save(self, *args, **kwargs):
         org_image = PImage.open(self.image)
-        
+
         if org_image.mode not in ('L', 'RGB'):
             org_image = org_image.convert('RGB')
-        
+
         size=getattr(settings,'IMAGE_WIDTH',580)
         width, height = org_image.size
         if width > size:
             delta = width / size
             height = int(height / delta)
             org_image.thumbnail((size, height), PImage.ANTIALIAS)
-        
-        #获取文件格式   
+
+        #获取文件格式
         split = self.image.name.rsplit('.',1)
         format=split[1]
         if format.upper()=='JPG':
             format = 'JPEG'
-            
+
         # 将图片存入内存
         temp_handle = StringIO()
         org_image.save(temp_handle, format)
         temp_handle.seek(0) # rewind the file
-        
+
         # 保存图像
         self.image.save(self.image.name, ContentFile(temp_handle.getvalue()) , save=False)
-        
+
         super(Image, self).save(*args, **kwargs)
-            
+
     def __unicode__(self):
         return self.title
 

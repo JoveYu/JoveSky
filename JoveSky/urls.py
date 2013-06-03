@@ -20,6 +20,10 @@ urlpatterns = patterns('',
         ,{'document_root': settings.MEDIA_ROOT }),
 )
 
+urlpatterns = patterns('',
+    (r'^grappelli/', include('grappelli.urls')),
+)
+
 urlpatterns += patterns('',
     url(r'^', include('blog.urls')),
 )

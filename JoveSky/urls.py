@@ -21,10 +21,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
-    (r'^grappelli/', include('grappelli.urls')),
-)
-
-urlpatterns += patterns('',
     url(r'^', include('blog.urls')),
 )
 

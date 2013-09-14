@@ -38,7 +38,7 @@
                   <a href="/archives/">文章归档</a>
                 </li>
                 {% for i in pages%}
-                <li class="current_page_item">
+                <li>
                   <a href="{{ i.get_absolute_url }}">{{ i.title }}</a>
                 </li>
                 {% endfor %}
